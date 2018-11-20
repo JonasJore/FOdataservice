@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.11",
+    "particlesjs": "^2.2.3",
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
+    "vue-particles": "^1.0.9",
     "vue-property-decorator": "^7.0.0"
   },
   "devDependencies": {
