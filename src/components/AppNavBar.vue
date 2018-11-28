@@ -5,7 +5,7 @@
         <div class="list-items">
           <ul class="navbar-nav">
             <li class="nav-item" id="nav-list-item">
-              <a class="nav-link" href="#">Hjem</a>
+              <a class="nav-link" href="#about-box">Hjem</a>
             </li>
             <li class="nav-item" id="nav-list-item">
               <a class="nav-link" href="#">Tjenester</a>

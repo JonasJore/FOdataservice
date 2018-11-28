@@ -1,7 +1,10 @@
 <template>
   <div class="mainContent">
     <div class="welcomeBox">
-      <vue-particles color="#dedede">
+      <vue-particles
+        color="#dedede"
+        :clickEffect="false"
+        hoverMode="grab">
       </vue-particles>
       <h2 class="welcomeMessage">{{ msg }}</h2>
     </div>
@@ -16,11 +19,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 @Component
 export default class AppWelcome extends Vue {
   @Prop() private msg!: string;
-
-
 }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  @import '../styles/_welcomeBox.scss';
+  @import '../styles/_welcomeBox';
 </style>
