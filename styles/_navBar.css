@@ -1,0 +1,40 @@
+#navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #e1e1e1;
+  -webkit-box-shadow: 1px 19px 16px -1px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 1px 19px 16px -1px rgba(0, 0, 0, 0.44);
+  box-shadow: 1px 19px 16px -1px rgba(0, 0, 0, 0.44);
+}
+
+#homeLink {
+  font-size: 125%;
+}
+
+.navMenu {}
+
+.navElement {
+  list-style-type: none;
+  float: left;
+}
+
+.navElement .navLink {
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navElement .navLink:hover {
+  border-bottom: 2px solid #000;
+}
+
+#servicesLink, #newsLink, #contactLink {
+  margin-left: 20%;
+}

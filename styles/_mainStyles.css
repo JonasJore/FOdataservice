@@ -1,0 +1,50 @@
+.welcomeCanvas {
+  z-index: 1;
+  width: 100%;
+  height: 10%;
+  background: url('../assets/img/wallpapeEx2.jpg') no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.welcomeCanvas {
+  text-align: center;
+}
+
+#welcomeText {
+  color: white;
+  font-size: 5em;
+}
+
+.welcomeTextBox {
+  border: 1px solid white;
+  padding: 2%;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+}
+
+/* styling for infoKnapp som tar deg ned til 'om-seksjonen' */
+.aboutButton {
+	background-color:transparent;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+}
+.aboutButton:hover {
+	background-color:transparent;
+}
+.aboutButton:active {
+	position:relative;
+	top:1px;
+}
