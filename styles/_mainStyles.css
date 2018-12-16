@@ -31,20 +31,22 @@
 
 /* styling for infoKnapp som tar deg ned til 'om-seksjonen' */
 .aboutButton {
-	background-color:transparent;
-	border:1px solid #ffffff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
 }
+
 .aboutButton:hover {
-	background-color:transparent;
+  background-color: transparent;
 }
+
 .aboutButton:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
