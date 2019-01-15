@@ -1,41 +1,58 @@
+/* 
+█████▒ ██▓ ███▄    █  ███▄    █     ▒█████  ▓██   ██▓  ██████ ▄▄▄█████▓▓█████  ██▓ ███▄    █ 
+▓██   ▒ ▓██▒ ██ ▀█   █  ██ ▀█   █    ▒██▒  ██▒ ▒██  ██▒▒██    ▒ ▓  ██▒ ▓▒▓█   ▀ ▓██▒ ██ ▀█   █ 
+▒████ ░ ▒██▒▓██  ▀█ ██▒▓██  ▀█ ██▒   ▒██░  ██▒  ▒██ ██░░ ▓██▄   ▒ ▓██░ ▒░▒███   ▒██▒▓██  ▀█ ██▒
+░▓█▒  ░ ░██░▓██▒  ▐▌██▒▓██▒  ▐▌██▒   ▒██   ██░  ░ ▐██▓░  ▒   ██▒░ ▓██▓ ░ ▒▓█  ▄ ░██░▓██▒  ▐▌██▒
+░▒█░    ░██░▒██░   ▓██░▒██░   ▓██░   ░ ████▓▒░  ░ ██▒▓░▒██████▒▒  ▒██▒ ░ ░▒████▒░██░▒██░   ▓██░
+▒ ░    ░▓  ░ ▒░   ▒ ▒ ░ ▒░   ▒ ▒    ░ ▒░▒░▒░    ██▒▒▒ ▒ ▒▓▒ ▒ ░  ▒ ░░   ░░ ▒░ ░░▓  ░ ▒░   ▒ ▒ 
+░       ▒ ░░ ░░   ░ ▒░░ ░░   ░ ▒░     ░ ▒ ▒░  ▓██ ░▒░ ░ ░▒  ░ ░    ░     ░ ░  ░ ▒ ░░ ░░   ░ ▒░
+░ ░     ▒ ░   ░   ░ ░    ░   ░ ░    ░ ░ ░ ▒   ▒ ▒ ░░  ░  ░  ░    ░         ░    ▒ ░   ░   ░ ░ 
+       ░           ░          ░        ░ ░   ░ ░           ░              ░  ░ ░           ░ 
+                                             ░ ░ 
+*/
+
 .welcomeCanvas {
-  z-index: 1;
+  z-index: -1;
   width: 100%;
-  height: 10%;
+  height: 100%;
+  text-align: center;
   background: url('../assets/img/wallpapeEx2.jpg') no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-.welcomeCanvas {
-  text-align: center;
+  position: relative;
 }
 
 #welcomeText {
   color: white;
-  font-size: 250%;
+  font-size: 200%;
 }
 
 .welcomeTextBox {
-  border: 1px solid white;
-  padding: 2%;
+  font-size: 200%;
+  z-index: 1;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  rigth: 10%;
+  top: 40%;
+  bottom: 50%;
+  text-align: center;
 }
 
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 35%;
+#about {
+  height: 900px;
 }
+
 
 /* styling for infoKnapp som tar deg ned til 'om-seksjonen' */
 .aboutButton {
   background-color: transparent;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
+  color: #fff;
   font-family: Arial;
   font-size: 17px;
   padding: 16px 31px;
@@ -46,15 +63,71 @@
   background-color: transparent;
 }
 
-.aboutBox {
+/* TODO: vurder å dra ut css til enkelte filer for hver section! */
+/* TODO: fiks about boks elementer. de må være mer windows-tile enn dette haha! */
+.aboutBoxOuter {
+  height: 25%;
+  width: 25%;
+  border: 1px solid #fff;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  display: inline-block;
+  cursor: pointer;
+  
+}
+
+.aboutBoxInner {
+  width: 100%;
+  heigth: 100%;
+  background-size: cover;
+  background-repeat: no-no-repeat;
+  background-position: center;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  transition: all .5s;
+  background-image: ;
   text-align: center;
 }
 
-.aboutButton:active {
-  position: relative;
-  top: 1px;
+/* bakgrunnsbilder til infobokser */
+.bb-1 {background-image: url('../assets/img/many.jpg');}
+/* bb-2, bb-3 osv... */
+
+.aboutBoxOuter:hover .aboutBoxInner, .aboutBoxOuter:focus .aboutBoxInner {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-.aboutBox:hover {
-  border: 1px solid black;
+/* pseudoClasses */
+.aboutBoxInner::before {
+  content: '';
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  background-color: rgba(52, 73, 94, 0.75);
+}
+
+.aboutBoxOuter:hover .aboutBoxInner:before, .aboutBoxOuter:focus .aboutBoxInner:before {
+  display: block;
+}
+
+.dtg {
+  color: white;
+}
+
+footer {
+  background-color: orange;
+  height: 100px;
+  width: 100%;
+  overflow:hidden;
 }
