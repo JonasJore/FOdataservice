@@ -28,7 +28,8 @@ TODO: alle section tags skal bruke id fremfor class...
 
 #welcomeText {
   color: white;
-  font-size: 200%;
+  font-family: 'Roboto';
+  font-size: 4vw;
 }
 
 .welcomeTextBox {
@@ -46,7 +47,7 @@ TODO: alle section tags skal bruke id fremfor class...
 #about {
   width: 100%;
   height: 500px;
-  background-color: #dcdcdc;
+  background-color: #ff;
   text-align: center;
 }
 
@@ -107,12 +108,15 @@ TODO: alle section tags skal bruke id fremfor class...
 }
 
 .aboutTextContainer {
-  margin-left: 25%;
-  width: 50%;
+  margin-top: 15px;
+  width: 80%;
   font-size: 2vw;
   text-align: center;
-  font-family: 'Lato';
+  font-family: 'Roboto';
   overflow: hidden;
+  position: absolute;
+  left: 10%;
+  right: 10%;
 }
 
 /* bakgrunnsbilder til infobokser */
@@ -162,10 +166,34 @@ section {
   text-align: center;
 }
 
-#contactForm {
+#contactFormSection {
   width: 100%;
-  height: 666px; /* did someone day... unholy? */
+  height: 600px; /* did someone day... unholy? */
   background-color: #e1e1e1;
+}
+
+.contactFormBox {
+  width: 50%;
+  text-align: center;
+  position: relative;
+  left: 25%;
+  rigth: 25%;
+  overflow: hidden;
+}
+
+.contactForm {
+  font-family: 'Roboto';
+  font-size: 1vw;
+}
+
+.submitButton, .resetButton {
+  float: right;
+  margin: .1vw;
+}
+
+.submitButton:hover, .resetButton:hover {
+  transition: all .5s;
+  background-color: transparent;
 }
 
 footer {
