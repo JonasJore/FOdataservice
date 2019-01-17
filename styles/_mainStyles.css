@@ -32,7 +32,7 @@ TODO: alle section tags skal bruke id fremfor class...
 }
 
 .welcomeTextBox {
-  font-size: 200%;
+  font-size: 2vw;
   z-index: 1;
   width: 80%;
   position: absolute;
@@ -47,12 +47,14 @@ TODO: alle section tags skal bruke id fremfor class...
   width: 100%;
   height: 500px;
   background-color: #dcdcdc;
+  text-align: center;
 }
-
 
 /* styling for infoKnapp som tar deg ned til 'om-seksjonen' */
 .aboutButton {
   background-color: transparent;
+  border-radius: 20px;
+  width: 10%;
   border: 1px solid #fff;
   display: inline-block;
   cursor: pointer;
@@ -61,24 +63,31 @@ TODO: alle section tags skal bruke id fremfor class...
   font-size: 17px;
   padding: 16px 31px;
   text-decoration: none;
+  list-style-type: none;
 }
 
 .aboutButton:hover {
-  background-color: transparent;
+  transition: all .8s;
+  background-color: #fff;
 }
 
 /* TODO: vurder å dra ut css til enkelte filer for hver section! */
 /* TODO: fiks about boks elementer. de må være mer windows-tile enn dette haha! */
+
 .aboutBoxOuter {
   height: 300px;
-  width: 25%;
+  width: 20%;
   /* border: 1px solid #fff; */
   overflow: hidden;
   position: relative;
   float: left;
   display: inline-block;
   cursor: pointer;
-  
+  margin: 2%;
+}
+
+.row {
+  width: 100%;
 }
 
 .aboutBoxInner {
@@ -95,6 +104,15 @@ TODO: alle section tags skal bruke id fremfor class...
   background-image: ;
   text-align: center;
   color: #fff;
+}
+
+.aboutTextContainer {
+  margin-left: 25%;
+  width: 50%;
+  font-size: 2vw;
+  text-align: center;
+  font-family: 'Lato';
+  overflow: hidden;
 }
 
 /* bakgrunnsbilder til infobokser */
@@ -146,8 +164,8 @@ section {
 
 #contactForm {
   width: 100%;
-  height: 666px;
-  background-color: #fff;
+  height: 666px; /* did someone day... unholy? */
+  background-color: #e1e1e1;
 }
 
 footer {

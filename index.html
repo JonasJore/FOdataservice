@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 
 <head>
   <meta charset="UTF-8">
@@ -13,6 +13,8 @@
   <link rel="stylesheet" type="text/css" href="styles/_mediaQueries.css">
   <!-- bootstrap: -->
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <!-- fonts: -->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <title>FOdataservice | Din Lokale PC og Server Service</title>
 </head>
 
@@ -34,72 +36,72 @@
         </li>
       </ul>
     </nav>
-
   </section>
   <section class="welcomeScreen">
-    
-      <canvas class="welcomeCanvas"></canvas>
-      
-        <div class="welcomeTextBox centered">
-          <p id="welcomeText">Velkommen til FOdataservice!</p>
-          <a href="#about" class="aboutButton">Les mer</a>
-        </div>
-    
-
+    <canvas class="welcomeCanvas"></canvas>
+    <div class="welcomeTextBox centered">
+      <p id="welcomeText">Velkommen til FOdataservice!</p>
+      <a href="#about" class="aboutButton">Les mer</a>
+    </div>
   </section>
-
   <section id="about">
-    <div class="container">
-      <div class="row">
-        
-        <div class="aboutBoxOuter">
-          <div class="aboutBoxInner bb-1">
-            <h3 class="aboutHeaderText">InfoBoks nr 1!</h3>
-            <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
-            <p>dont let memes be dreams</p>
-          </div>
-        </div>
-        
-        <div class="aboutBoxOuter">
-          <div class="aboutBoxInner bb-2">
-            <h3 class="aboutHeaderText">InfoBoks nr 1!</h3>
-            <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
-            <p>dont let memes be dreams</p>
-            <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
-            <p>dont let memes be dreams</p>
-            <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
-            <p>dont let memes be dreams</p>
-            <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
-            <p>dont let memes be dreams</p>
-            <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
-            <p>dont let memes be dreams</p>
-          </div>
-        </div>
-        
-        <div class="aboutBoxOuter">
-          <div class="aboutBoxInner bb-1">
-            <h3 class="aboutHeaderText">InfoBoks nr 1!</h3>
-            <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
-            <p>dont let memes be dreams</p>
-          </div>
-        </div>
-        
-        <div class="aboutBoxOuter">
-          <div class="aboutBoxInner bb-1">
-            <h3 class="aboutHeaderText">InfoBoks nr 1!</h3>
-            <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
-            <p>dont let memes be dreams</p>
-          </div>
-        </div>
-        
-      </div>
+    <div class="aboutTextContainer">
+      Vi utfører tjenester som:
+
+      Feilsøk og vedlikehold på PC og Servere
+      Bygging av PC'er
+      Bytte av deler på PC og Laptop
+      Feilsøke nettverk og rutere
+      Installering og konfigurering av nye og gamle pc'er
+      Fjerne virus og malware
+      Sette opp ny rutere
+      Og diverse andre ting.
+
+      Ta gjerne kontakt så får du svar på eventuelle spørsmål du skulle ha.
     </div>
   </section>
   <section id="services">
     <div class="sectionHeader">
       Tjenester
     </div>
-    
+    <div class="row">
+      <div class="aboutBoxOuter">
+        <div class="aboutBoxInner bb-1">
+          <h3 class="aboutHeaderText">InfoBoks nr 1!</h3>
+          <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
+          <p>dont let memes be dreams</p>
+        </div>
+      </div>
+      <div class="aboutBoxOuter">
+        <div class="aboutBoxInner bb-2">
+          <h3 class="aboutHeaderText">InfoBoks nr 1!</h3>
+          <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
+          <p>dont let memes be dreams</p>
+          <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
+          <p>dont let memes be dreams</p>
+          <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
+          <p>dont let memes be dreams</p>
+          <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
+          <p>dont let memes be dreams</p>
+          <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
+          <p>dont let memes be dreams</p>
+        </div>
+      </div>
+      <div class="aboutBoxOuter">
+        <div class="aboutBoxInner bb-1">
+          <h3 class="aboutHeaderText">InfoBoks nr 1!</h3>
+          <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
+          <p>dont let memes be dreams</p>
+        </div>
+      </div>
+      <div class="aboutBoxOuter">
+        <div class="aboutBoxInner bb-1">
+          <h3 class="aboutHeaderText">InfoBoks nr 1!</h3>
+          <p>oifdoigbndfoigbnfdogifdbngofdigbnogidbgd</p>
+          <p>dont let memes be dreams</p>
+        </div>
+      </div>
+    </div>
   </section>
   <section id="news">
     <div class="sectionHeader">
@@ -110,22 +112,48 @@
     <div class="sectionHeader">
       Kontakt
     </div>
+    <form>
+      <div class="form-group">
+        <label for="emailInput">Epostadresse</label>
+        <input type="email" class="form-control" id="emailInput" placeholder="navn@eksempel.no">
+      </div>
+      <div class="form-group">
+        <label for="subjectInput">Emne</label>
+        <input type="email" class="form-control" id="subjectInput" placeholder="hei, jeg lurer på...">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Type henvendelse</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>Hjemmehjelp</option>
+          <option>Fjernhjelp</option>
+          <option>Generelt Spørsmål</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Melding</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-outline-primary">Send</button>
+        <button type="reset" class="btn btn-outline-danger">Nullstill</button>
+      </div>
+    </form>
   </section>
   <section id="businessLocation">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4762.049073047591!2d8.613811970061342!3d59.87911129315031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463f5c518904f7ed%3A0x911927779dc14eea!2s3660+Rjukan!5e0!3m2!1sno!2sno!4v1547670879676" 
-      width="1900" 
-      height="400" 
-      frameborder="0" 
-      style="border:0" 
-      allowfullscreen>    
-    </iframe>  
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4762.049073047591!2d8.613811970061342!3d59.87911129315031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463f5c518904f7ed%3A0x911927779dc14eea!2s3660+Rjukan!5e0!3m2!1sno!2sno!4v1547670879676"
+      width="100%" height="200px" frameborder="0" style="border:0" allowfullscreen>
+    </iframe>
   </section>
   <section id="footerSection">
     <footer>
-      <h3>herro</h3>
+      <h3>Du har nå nådd bånn</h3>
       <div class="copyrightText">
         <script type="text/javascript" id="madeByLink" src="assets/scripts/footerContent.js"></script>
-        <a href="https://www.github.com/jonasjore">Jore</a> all rights reserved
+        <a href="https://www.github.com/jonasjore">Jore</a> all rights reserved<br />
+        mail:<a href="mailto:support@fodataservice.com?subject=Jeg lurer på en ting">
+          <span class="glyphicon glyphicon-envelope" id="mailIcon"></span>
+        </a>
+        
       </div>
     </footer>
   </section>

@@ -11,13 +11,21 @@
   -webkit-box-shadow: 1px 19px 16px -1px rgba(0, 0, 0, 0.44);
   -moz-box-shadow: 1px 19px 16px -1px rgba(0, 0, 0, 0.44);
   box-shadow: 1px 19px 16px -1px rgba(0, 0, 0, 0.44);
+  font-family: 'Lato';
 }
 
 #homeLink {
-  font-size: 125%;
+  font-size: 16px;
+  margin-top: 1px;
 }
 
 .navMenu {}
+
+.navLogo {
+  list-style-type: none;
+  float: left;
+  text-decoration: none
+}
 
 .navElement {
   list-style-type: none;
@@ -37,5 +45,5 @@
 }
 
 #servicesLink, #newsLink, #contactLink {
-  margin-left: 20%;
+  margin-left: 15%;
 }
