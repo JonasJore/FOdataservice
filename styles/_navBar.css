@@ -38,19 +38,14 @@
   text-decoration: none;
 }
 
-.navElement .navLink:hover {
-  border-bottom: 2px solid #000;
-}
+.navElement .navLink:hover { border-bottom: 2px solid #000; }
 
-#servicesLink, #newsLink, #contactLink {
-  margin-left: 15%;
-}
+#servicesLink, #newsLink, #contactLink { margin-left: 15%; }
 
-.burgerIcon {
-  display: none;
-}
+.burgerIcon { display: none; }
 
-
+/* mediaqueries for navbar */
+/* TODO: vurder om disse hører hjemme i _mediaQueries isteden */
 @media screen and (max-width: 600px) {
   .navMenu .navElement:not(:first-child) { display: none; }
   
@@ -71,6 +66,7 @@
     margin-left: -52px;
     font-size: 5vw;
   }
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -89,7 +85,13 @@
   }
   
   .navMenu.responsiveMenu .navElement:first-child {
-    margin-left: -52px;
+    position: absolute;
+    left: 0;
     font-size: 5vw;
   }
+  
+  .navElement .navLink:first-child {
+    margin-left: 1px;
+  }
+  .navElement .navLink:hover { border: 0; }
 }

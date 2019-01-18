@@ -11,6 +11,11 @@
                                              ░ ░ 
                                              
 TODO: alle section tags skal bruke id fremfor class...                                             
+
+TODO: tror ikke _typography.css er verd å beholde siden dette må defineres manuelt
+      i styles hvor det er verd å bruke den fonten
+      
+TODO: dette prosjektet innebærer såååå mye CSS :O
 */
 
 .welcomeCanvas {
