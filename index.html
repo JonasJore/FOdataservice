@@ -23,20 +23,27 @@
 <body>
   <section id="navBar">
     <nav class="navbar-main">
-      <ul id="navMenu">
-        <li class="navElement" id="homeLink">
-          <a class="navLink" href="">FOdataservice</a>
-        </li>
-        <li class="navElement" id="servicesLink">
-          <a class="navLink" href="#services">Tjenester</a>
-        </li>
-        <li class="navElement" id="newsLink">
-          <a class="navLink" href="">Nytt</a>
-        </li>
-        <li class="navElement" id="contactLink">
-          <a class="navLink" href="#contactForm">Kontakt</a>
-        </li>
-      </ul>
+      <div id="myTopNav">
+        <ul id="navMenu" class="navMenu">
+          <li class="navElement" id="homeLink">
+            <a class="navLink" href="">FOdataservice</a>
+          </li>
+          <li class="navElement" id="servicesLink">
+            <a class="navLink" href="#services">Tjenester</a>
+          </li>
+          <li class="navElement" id="newsLink">
+            <a class="navLink" href="">Nytt</a>
+          </li>
+          <li class="navElement" id="contactLink">
+            <a class="navLink" href="#contactForm">Kontakt</a>
+          </li>
+          <li class="navElement" id="burger">
+            <a href="javascript:void(0);" class="burgerIcon" onclick="expandMenu()">
+              <i class="fa fa-bars" id="burgerFavicon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </section>
   <section class="welcomeScreen">
@@ -47,21 +54,21 @@
     </div>
   </section>
   <section id="about">
-    
-      <div class="aboutTextContainer">
-        <p>
-          <b>
-            F.Ø Dataservice er et lite og lokalt teknisk foretak som leverer en rekke datatjenester
-          </b>
-        </p>
-        <p>
-          firmaet er lokalisert i Rjukan, Telemark
-        </p>
 
-        <!-- TODO: avklaring om hva som skal stå av tekst her.. -->
-        <!-- TODO: teksten ser ganske hjemmespikket ut atm. -->
-        <!-- TODO: må bli responsivt... -->
-        <!-- 
+    <div class="aboutTextContainer">
+      <p>
+        <b>
+          F.Ø Dataservice er et lite og lokalt teknisk foretak som leverer en rekke datatjenester
+        </b>
+      </p>
+      <p>
+        firmaet er lokalisert i Rjukan, Telemark
+      </p>
+
+      <!-- TODO: avklaring om hva som skal stå av tekst her.. -->
+      <!-- TODO: teksten ser ganske hjemmespikket ut atm. -->
+      <!-- TODO: må bli responsivt... -->
+      <!-- 
         
         <p>Vi utfører tjenester som:
   
@@ -76,7 +83,7 @@
   
         Ta gjerne kontakt så får du svar på eventuelle spørsmål du skulle ha.</p> -->
 
-      </div>
+    </div>
 
 
   </section>
@@ -129,7 +136,7 @@
         <h3>Ta kontakt</h3>
         <div class="form-group">
           <label for="emailInput">Epostadresse</label>
-        <input type="email" class="form-control" id="emailInput" placeholder="navn@eksempel.no">
+          <input type="email" class="form-control" id="emailInput" placeholder="navn@eksempel.no">
         </div>
         <div class="form-group">
           <label for="subjectInput">Emne</label>
@@ -174,6 +181,7 @@
       </div>
     </footer>
   </section>
+  <script type="text/javascript" src="assets/scripts/burgerMenu.js"></script>
 </body>
 
 </html>
