@@ -93,9 +93,7 @@ TODO: dette prosjektet innebærer såååå mye CSS :O
   margin: 2%;
 }
 
-.row {
-  width: 100%;
-}
+.row { width: 100%; }
 
 .aboutBoxInner {
   width: 100%;
@@ -168,9 +166,7 @@ TODO: dette prosjektet innebærer såååå mye CSS :O
   background-color: #dcdcdc; /* TODO: ikke riktig farge dette ass... */
 }
 
-section {
-  text-align: center;
-}
+section { text-align: center; }
 
 #contactFormSection {
   width: 100%;
@@ -211,8 +207,11 @@ footer {
   background-color: #36454f;
 }
 
+.phoneNumber { font-family: 'Roboto'; }
+
 .copyrightText {
   text-decoration: none;
+  font-family: 'Roboto';
   color: #fff;
   font-size: 12px;
 }

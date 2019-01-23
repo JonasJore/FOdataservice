@@ -70,6 +70,7 @@
 }
 
 @media screen and (max-width: 1000px) {
+  
   .navMenu.responsiveMenu { position: relative; }
   
   .navMenu.responsiveMenu .navElement:last-child {
@@ -77,21 +78,21 @@
     top: 5.5%;
     right: 5%;
   }
-  
+
   .navMenu.responsiveMenu .navElement:not(:last-child) {
     float: none;
     display: block;
     text-align: left;
   }
-  
+
   .navMenu.responsiveMenu .navElement:first-child {
     position: absolute;
     left: 0;
     font-size: 5vw;
   }
-  
-  .navElement .navLink:first-child {
-    margin-left: 1px;
-  }
+
+  .navElement .navLink:first-child { margin-left: 1px; }
+    
   .navElement .navLink:hover { border: 0; }
+
 }
