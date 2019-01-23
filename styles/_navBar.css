@@ -46,7 +46,7 @@
 
 /* mediaqueries for navbar */
 /* TODO: vurder om disse hører hjemme i _mediaQueries isteden */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .navMenu .navElement:not(:first-child) { display: none; }
   
   .navMenu .navElement:last-child {
@@ -69,7 +69,7 @@
   
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .navMenu.responsiveMenu { position: relative; }
   
   .navMenu.responsiveMenu .navElement:last-child {

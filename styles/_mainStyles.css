@@ -29,6 +29,7 @@ TODO: dette prosjektet innebærer såååå mye CSS :O
   -o-background-size: cover;
   background-size: cover;
   position: relative;
+  top: 25px;
 }
 
 #welcomeText {

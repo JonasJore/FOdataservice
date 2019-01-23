@@ -1,5 +1,7 @@
 // TODO: er dette funksjonsnavnet forklarlig nok?
 let expandMenu = () => {
-  let x = document.getElementById("myTopNav")
-  return x.className === "navMenu" ? x.className += " responsiveMenu" : x.className = "navMenu"
+  const navId = document.getElementById("myTopNav")
+  return navId.className === "navMenu" 
+    ? navId.className += " responsiveMenu" 
+    : navId.className = "navMenu"  
 }
