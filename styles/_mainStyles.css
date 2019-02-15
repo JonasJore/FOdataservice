@@ -18,6 +18,11 @@ TODO: tror ikke _typography.css er verd å beholde siden dette må defineres man
 TODO: dette prosjektet innebærer såååå mye CSS :O
 */
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .welcomeCanvas {
   z-index: -1;
   width: 100%;
