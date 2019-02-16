@@ -31,6 +31,7 @@
   float: left;
 }
 
+
 .navElement .navLink {
   display: block;
   color: #000;
@@ -39,7 +40,14 @@
   text-decoration: none;
 }
 
-.navElement .navLink:hover { border-bottom: 2px solid #000; }
+.navElement:not(:first-child) {
+  margin-left: 10%;
+}
+
+.navElement .navLink:hover { 
+  border-bottom: 2px solid #000;
+}
+
 
 #servicesLink, #newsLink, #contactLink { margin-left: 15%; }
 
@@ -67,6 +75,7 @@
     margin-left: -52px;
     font-size: 5vw;
   }
+  
   
 }
 
