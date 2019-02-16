@@ -23,6 +23,10 @@ TODO: dette prosjektet innebærer såååå mye CSS :O
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .welcomeCanvas {
   z-index: -1;
   width: 100%;
