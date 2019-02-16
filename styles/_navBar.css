@@ -2,6 +2,7 @@
   z-index: 2;
   position: fixed;
   font-family: 'Lato';
+  font-size: 1em;
   top: 0;
   left: 0;
   right: 0;
@@ -14,10 +15,10 @@
   box-shadow: 1px 19px 16px -1px rgba(0, 0, 0, 0.44);
 }
 
-#homeLink {
+/* #homeLink {
   font-size: 16px;
   margin-top: 1px;
-}
+} */
 
 .navLogo {
   list-style-type: none;

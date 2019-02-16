@@ -9,14 +9,14 @@
   <link rel="stylesheet" type="text/css" href="styles/_mainStyles.css">
   <link rel="stylesheet" type="text/css" href="styles/_navBar.css">
   <link rel="stylesheet" type="text/css" href="styles/_colorScheme.css">
-  <link rel="stylesheet" type="text/css" href="styles/_typography.css">
   <link rel="stylesheet" type="text/css" href="styles/_mediaQueries.css">
   <!-- bootstrap: -->
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
   <!-- fontawesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <!-- fonts: -->
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
+    crossorigin="anonymous"
+  >
   <title>FOdataservice | Din Lokale PC og Server Service</title>
 </head>
 
@@ -28,6 +28,9 @@
           <li class="navElement" id="homeLink">
             <a class="navLink" href="">FOdataservice</a>
           </li>
+          <li class="navElement" id="aboutLink">
+            <a class="navLink" href="#about">Om</a>
+          </li>
           <li class="navElement" id="servicesLink">
             <a class="navLink" href="#services">Tjenester</a>
           </li>
@@ -35,7 +38,7 @@
             <a class="navLink" href="">Nytt</a>
           </li>
           <li class="navElement" id="contactLink">
-            <a class="navLink" href="#contactForm">Kontakt</a>
+            <a class="navLink" href="#contactFormSection">Kontakt</a>
           </li>
           <li class="navElement" id="burger">
             <a href="javascript:void(0);" class="burgerIcon" onclick="expandMenu()">
@@ -47,41 +50,50 @@
     </nav>
   </section>
   <section class="welcomeScreen">
-    <canvas class="welcomeCanvas"></canvas>
-    <div class="welcomeTextBox centered">
-      <h3 id="welcomeText">Velkommen til FØdataservice</h3>
-      <!-- TODO: vurder å bytt denne knappen med noe mer moderne i bunnen av canvas -->
-      <a href="#about" class="aboutButton">Les mer</a>
+    <div class="welcomeCanvas">
+    
+    <div class="row">
+      <div class="col-3">
+        <h3 id="welcomeText">Velkommen til FØdataservice</h3>
+        <!-- TODO: vurder å bytt denne knappen med noe mer moderne i bunnen av canvas -->
+        <a href="#about" class="aboutButton">Les mer</a>  
+      </div>
+    </div>
+      
+    
     </div>
   </section>
   <section id="about">
-    <div class="aboutTextContainer">
-      <p>
-        <b>
-          F.Ø Dataservice er et lite og lokalt, teknisk foretak som leverer en rekke datatjenester
-        </b>
-      </p>
-      <p>
-        firmaet er lokalisert i Rjukan, Telemark
-      </p>
+    <div class="row">
+      <div class="col-3">
+        <p class="lead">
+          <!-- <b> -->
+            F.Ø Dataservice er et lite og lokalt, teknisk foretak som leverer en rekke datatjenester
+          <!-- </b> -->
+        </p>
+        <p class="lead">
+          firmaet er lokalisert i Rjukan, Telemark
+        </p>
 
-      <!-- TODO: avklaring om hva som skal stå av tekst her.. -->
-      <!-- TODO: teksten ser ganske hjemmespikket ut atm. -->
-      <!-- TODO: må bli responsivt... -->
-      <!-- 
-        <p>Vi utfører tjenester som:
-  
-        Feilsøk og vedlikehold på PC og Servere
-        Bygging av PC'er
-        Bytte av deler på PC og Laptop
-        Feilsøke nettverk og rutere
-        Installering og konfigurering av nye og gamle pc'er
-        Fjerne virus og malware
-        Sette opp ny rutere
-        Og diverse andre ting.
-  
-        Ta gjerne kontakt så får du svar på eventuelle spørsmål du skulle ha.</p> -->
+        <!-- TODO: avklaring om hva som skal stå av tekst her.. -->
+        <!-- TODO: teksten ser ganske hjemmespikket ut atm. -->
+        <!-- TODO: må bli responsivt... -->
+        <!-- 
+          <p>Vi utfører tjenester som:
+    
+          Feilsøk og vedlikehold på PC og Servere
+          Bygging av PC'er
+          Bytte av deler på PC og Laptop
+          Feilsøke nettverk og rutere
+          Installering og konfigurering av nye og gamle pc'er
+          Fjerne virus og malware
+          Sette opp ny rutere
+          Og diverse andre ting.
+    
+          Ta gjerne kontakt så får du svar på eventuelle spørsmål du skulle ha.</p> -->
+      </div>  
     </div>
+    
   </section>
   <section id="services">
     <div class="sectionHeader">
