@@ -175,6 +175,12 @@ html {
   width: 100%;
   height: 300px; /* TODO: endre senere! */
   background-color: #dcdcdc; /* TODO: ikke riktig farge dette ass... */
+  
+  /*paralax-effekt for nyheter seksjonen. wip*/
+  background: url('../assets/img/wallpapeEx1.jpg') no-repeat center;
+  background-attachment: fixed;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 
 section { text-align: center; }
