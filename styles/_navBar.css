@@ -15,11 +15,6 @@
   box-shadow: 1px 19px 16px -1px rgba(0, 0, 0, 0.44);
 }
 
-/* #homeLink {
-  font-size: 16px;
-  margin-top: 1px;
-} */
-
 .navLogo {
   list-style-type: none;
   float: left;
@@ -44,10 +39,7 @@
   margin-left: 10%;
 }
 
-.navElement .navLink:hover { 
-  border-bottom: 2px solid #000;
-}
-
+.navElement:not(:first-child) .navLink:hover { border-bottom: 2px solid #000; }
 
 #servicesLink, #newsLink, #contactLink { margin-left: 15%; }
 
@@ -55,6 +47,7 @@
 
 /* mediaqueries for navbar */
 /* TODO: vurder om disse hører hjemme i _mediaQueries isteden */
+/* TODO: kanskje lurt å droppe en egen .css for mediaqueries? */
 @media screen and (max-width: 1000px) {
   .navMenu .navElement:not(:first-child) { display: none; }
   

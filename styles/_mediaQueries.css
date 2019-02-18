@@ -1,16 +1,4 @@
-/* aboutbokser under velksomstbanner */
-@media screen and (max-width: 960px) {
-  .aboutBoxOuter { width: 100%; margin: 20px 0px; }
-  .row { padding: 20px 20px; }
-}
-
-
-
-
-
-
 /* 
   TODO: trekk alle mediaqueries ut fra enkelte stylesheets og legg
-  de her!
-  
+  de her
  */
