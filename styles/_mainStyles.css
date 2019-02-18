@@ -21,20 +21,26 @@ TODO: tror ikke _typography.css er verd å beholde siden dette må defineres man
   margin: 0;
 }
 
-html { scroll-behavior: smooth; }
+html { 
+  scroll-behavior: smooth;
+  overflow-x: auto;
+}
 
 section { text-align: center; }
 
-/* fjerner default styling for regler */
 a:link { text-decoration: none; }
 
 a:visited { text-decoration: none; }
 
 a:active { text-decoration: none; }
 
+#welcomeScreen {
+  min-height: 500px;
+}
+
 .welcomeCanvas {
   width: 100%;
-  height: 55vw;
+  min-height: 500px;
   display:flex;
   align-items: center;
   background: url('../assets/img/wallpapeEx2.jpg') no-repeat center;
@@ -52,22 +58,10 @@ a:active { text-decoration: none; }
   font-size: 4vw;
 }
 
-.welcomeTextBox {
-  font-size: 2vw;
-  z-index: 1;
-  width: 80%;
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  top: 40%;
-  bottom: 50%;
-  text-align: center;
-}
-
 #about {
   width: 100%;
-  height: 500px;
-  background-color: #ff;
+  min-height: 500px;
+  background-color: #ffffff;
   display:flex;
   align-items: center;
   font-family: 'Lato';
@@ -105,11 +99,11 @@ a:active { text-decoration: none; }
 
 #news {
   width: 100%;
-  height: 300px; /* TODO: endre senere! */
-  background-color: #dcdcdc; /* TODO: ikke riktig farge dette ass... */
+  height: 400px; /* TODO: endre senere! */
+  background-color: #dcdcdc;
   
   /*paralax-effekt for nyheter seksjonen. wip*/
-  background: url('../assets/img/wallpapeEx1.jpg') no-repeat center;
+  background: url('../assets/img/wallpapeExNY.jpg') no-repeat center;
   background-attachment: fixed;
   -moz-background-size: cover;
   background-size: cover;
@@ -126,7 +120,7 @@ a:active { text-decoration: none; }
   text-align: center;
   position: relative;
   left: 25%;
-  rigth: 25%;
+  right: 25%;
   overflow: hidden;
 }
 
@@ -163,6 +157,11 @@ footer {
   font-size: 12px;
 }
 
-.twitch-link {  
-  color: purple;
+.twitch-link, .twitch-link:hover {  
+  color: #4b367c;
+}
+
+.devLink, .devLink:hover {
+  color: #ffffff;
+  text-decoration: none;
 }

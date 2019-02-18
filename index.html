@@ -73,7 +73,7 @@
             firmaet er lokalisert i Rjukan, Telemark
           </p>
           
-          <a href="https://www.twitch.tv/lcdr_nuttcrack" class="twitch-link">
+          <a href="https://www.twitch.tv/lcdr_nuttcrack" target="_blank" class="twitch-link">
             <h1>
               <i class="fab fa-twitch twitch-icon"></i>
             </h1>
@@ -136,19 +136,19 @@
     </div>
   </section>
   <section id="contactFormSection">
-    <div class="sectionHeader">
+    <!-- <div class="sectionHeader">
       Kontakt
-    </div>
+    </div> -->
     <div class="contactFormBox">
       <form class="contactForm">
         <h3>Ta kontakt</h3>
         <div class="form-group">
           <label for="emailInput">Epostadresse</label>
-          <input type="email" class="form-control" id="emailInput" placeholder="navn@eksempel.no">
+          <input type="text" class="form-control" id="emailInput" placeholder="navn@eksempel.no">
         </div>
         <div class="form-group">
           <label for="subjectInput">Emne</label>
-          <input type="email" class="form-control" id="subjectInput" placeholder="hei, jeg lurer på...">
+          <input type="text" class="form-control" id="subjectInput" placeholder="hei, jeg lurer på...">
         </div>
         <div class="form-group">
           <label for="exampleFormControlSelect1">Type henvendelse</label>
@@ -160,11 +160,12 @@
         </div>
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Melding</label>
+          <!-- TODO: bytt id'en til <textarea når mulig -->
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <div class="form-group">
           <button type="reset" class="btn btn-outline-danger resetButton">Nullstill</button>
-          <button type="submit" class="btn btn-outline-primary submitButton">Send</button>
+          <button type="button" class="btn btn-outline-primary submitButton" onclick="validation(emailInput.value, subjectInput.value, exampleFormControlTextarea1.value)">Send</button>
         </div>
       </form>
     </div>
@@ -179,16 +180,17 @@
       <h3>Du har nå nådd bånn</h3>
       <div class="copyrightText">
         <script type="text/javascript" id="madeByLink" src="assets/scripts/footerContent.js"></script>
-        <a href="https://www.github.com/jonasjore">Jore</a> all rights reserved <br />
+        <a href="https://www.github.com/jonasjore" class="devLink">Jore</a> - all rights reserved <br />
         mail:
         <a href="mailto:support@fodataservice.com?subject=Jeg lurer på en ting">
           <span class="fa fa-envelope" id="mailIcon"></span>
         </a>
-        | <span class="fa fa-phone phoneNumber"></span> +47 95130885
+        | <span class="fa fa-phone phoneNumber"></span> +4795130885
       </div>
     </footer>
   </section>
   <script type="text/javascript" src="assets/scripts/burgerMenu.js"></script>
+  <script type="text/javascript" src="assets/scripts/validation.js"></script>
 </body>
 
 </html>
