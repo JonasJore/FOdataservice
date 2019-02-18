@@ -35,9 +35,7 @@
   text-decoration: none;
 }
 
-.navElement:not(:first-child) {
-  margin-left: 10%;
-}
+.navElement:not(:first-child) { margin-left: 10%; }
 
 .navElement:not(:first-child) .navLink:hover { border-bottom: 2px solid #000; }
 
@@ -46,8 +44,6 @@
 .burgerIcon { display: none; }
 
 /* mediaqueries for navbar */
-/* TODO: vurder om disse hører hjemme i _mediaQueries isteden */
-/* TODO: kanskje lurt å droppe en egen .css for mediaqueries? */
 @media screen and (max-width: 1000px) {
   .navMenu .navElement:not(:first-child) { display: none; }
   
