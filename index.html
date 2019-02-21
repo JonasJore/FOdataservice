@@ -151,11 +151,12 @@
           <input type="text" class="form-control" id="subjectInput" placeholder="hei, jeg lurer på...">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Type henvendelse</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>Hjemmehjelp</option>
-            <option>Fjernhjelp</option>
-            <option>Generelt Spørsmål</option>
+          <label for="typeOfService">Type henvendelse</label>
+          <select class="form-control" id="typeOfService">
+            <option selected="selected" value="default">Velg emne</option>
+            <option value="Hjemmehjelp">Hjemmehjelp</option>
+            <option value="Fjernhjelp">Fjernhjelp</option>
+            <option value="Generelt Spørsmål">Generelt Spørsmål</option>
           </select>
         </div>
         <div class="form-group">
@@ -165,7 +166,7 @@
         </div>
         <div class="form-group">
           <button type="reset" class="btn btn-outline-danger resetButton">Nullstill</button>
-          <button type="button" class="btn btn-outline-primary submitButton" onclick="validation(emailInput.value, subjectInput.value, exampleFormControlTextarea1.value)">Send</button>
+          <button type="button" class="btn btn-outline-primary submitButton" onclick="validation(emailInput.value, subjectInput.value, typeOfService.value, exampleFormControlTextarea1.value)">Send</button>
         </div>
       </form>
     </div>
