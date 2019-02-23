@@ -1,3 +1,5 @@
+// TODO: validation.js er ikke lenger ett forklarende nok filnavn :I
+
 const validering = {
   'INVALID_MAIL':'INVALID_MAIL', 
   'INVALID_SUBJECT':'INVALID_SUBJECT',
@@ -13,17 +15,20 @@ let validation = (email, subject, type, text) => {
   const validationRules = []
   if(email === '' || !validEmail) {
     validationRules.push(validering.INVALID_MAIL)
-  } 
-  if(subject.length == 0) {
+  } if(subject.length == 0) {
     validationRules.push(validering.INVALID_SUBJECT)
-  } 
-  if(type === 'default') {
+  } if(type === 'default') {
     validationRules.push(validering.INVALID_TYPE_OF_SERVICE)
-  } 
-  if(text.length === 0 || text.length > 150) {
+  } if(text.length === 0 || text.length > 150) {
     validationRules.push(validering.INVALID_TEXT)
+  } 
+  
+  if(noErrors(validationRules)) {
+    let preparedJson = prepareJsonObj(email, subject, type, text)
+    console.log(preparedJson)
+    sendMailRequest(preparedJson)
+    console.log("kva skjer?")
   }
-  console.log(noErrors(validationRules))
 }
 
 const validMail = validationArr => validationArr.includes(validering.INVALID_MAIL) ? false : true
@@ -37,7 +42,21 @@ let prepareJsonObj = (mail, subject, type, text) => {
   return JSON.stringify({
     "mail": mail,
     "subject": subject,
-    "type-of-service": type,
+    "typeOfService": type,
     "text": text
+  })
+}
+
+let sendMailRequest = (obj) => {
+  const requestRoute = 'http://localhost:80/assets/mail/mailClient.php' // TODO: endres ved produksjonssetting
+  fetch(requestRoute, {
+    method: 'post',
+    header: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: obj
+  }).then((response) => {
+    console.log(response + ' httpResponse...')
   })
 }
