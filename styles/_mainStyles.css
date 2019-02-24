@@ -157,11 +157,16 @@ footer {
   font-size: 12px;
 }
 
-.twitch-link, .twitch-link:hover {  
+.twitch-link, .twitch-link:hover {  /* TODO: får se hvor viktig det blir med linker til sosiale media...*/
   color: #4b367c;
 }
 
 .devLink, .devLink:hover {
   color: #ffffff;
   text-decoration: none;
+}
+
+#mailIcon {
+  /* color: #ffffff; */
+  color: red;
 }

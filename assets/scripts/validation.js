@@ -47,7 +47,8 @@ let prepareJsonObj = (mail, subject, type, text) => {
 }
 
 let sendMailRequest = (obj) => {
-  const requestRoute = 'http://localhost:80/assets/mail/mailerClient.php' // TODO: endres ved produksjonssetting
+  const endpoint = 'assets/mail/mailerClient.php'
+  const requestRoute = `http://localhost:80/${endpoint}` // TODO: endres ved produksjonssetting
   fetch(requestRoute, {
     method: 'post',
     header: {
@@ -56,6 +57,6 @@ let sendMailRequest = (obj) => {
     },
     body: obj
   }).then((response) => {
-    console.log(response + ' httpResponse...')
+    console.log(`${obj} er sendt avgårde nu...`)
   })
 }
