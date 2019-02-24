@@ -1,6 +1,5 @@
 <?php 
-$requestBody = file_get_contents('php://input'); // tar kun imot body'en til post requests fra validering.js. skal være Utilgjengelig for alt annet...
-
+// TODO: ytterligere logikk for formulering av eposten som skal sendt.
 class Mail {
   private $requestBody;
   private $mail;
@@ -16,12 +15,27 @@ class Mail {
     $this->typeOfService = $this->requestBody['typeOfService'];
   }
   
-  public function sendMail(): void {
-    $to = 'jonas.jore@gmail.com';
+  private function getMail(): String {
+    return $this->mail;
+  }
+  
+  private function getSubject(): String {
+    return $this->subject;
+  }
+  
+  private function getMessage(): String {
+    return $this->message;
+  }
+  
+  private function getTypeOfService(): String {
+    return $this->typeOfService;
+  }
+  
+  public function sendMail($toAdress): void {
     mail(
-      $to,
-      $this->subject,
-      $this->message,
+      $toAdress,
+      $this->getSubject(),
+      $this->getMessage(),
       'From: Mail sendt kontaktskjema' . '\r\n'.
       'Reply-To: webmaster@fodataservice.com' . '\r\n'.
       'X-Mailer: PHP/' . phpversion()
@@ -29,5 +43,4 @@ class Mail {
   }
 }
 
-$instance = new Mail($requestBody);
-$instance->sendMail();
+final class MailClientException extends RuntimeException {}

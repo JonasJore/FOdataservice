@@ -6,7 +6,6 @@ const validering = {
   'INVALID_TYPE_OF_SERVICE':'INVALID_TYPE_OF_SERVICE',
   'INVALID_TEXT':'INVALID_TEXT'
 }
-
 Object.freeze(validering)
 
 let validation = (email, subject, type, text) => {
@@ -48,7 +47,7 @@ let prepareJsonObj = (mail, subject, type, text) => {
 }
 
 let sendMailRequest = (obj) => {
-  const requestRoute = 'http://localhost:80/assets/mail/mailClient.php' // TODO: endres ved produksjonssetting
+  const requestRoute = 'http://localhost:80/assets/mail/mailerClient.php' // TODO: endres ved produksjonssetting
   fetch(requestRoute, {
     method: 'post',
     header: {
