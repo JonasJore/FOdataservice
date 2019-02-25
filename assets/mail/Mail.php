@@ -1,5 +1,6 @@
 <?php 
 // TODO: ytterligere logikk for formulering av eposten som skal sendt.
+// TODO: dette er en dto-klasse... hva gjør business logikk her?!
 class Mail {
   private $requestBody;
   private $mail;

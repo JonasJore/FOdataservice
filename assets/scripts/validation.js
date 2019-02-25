@@ -12,7 +12,7 @@ let validation = (email, subject, type, text) => {
   const emailRegEx = /^[a-å|0-9._%+-]+@[a-z|0-9.-]+\.[a-z]{2,}$/
   const validEmail = emailRegEx.test(String(email.toLowerCase()))
   const validationRules = []
-  if(email === '' || !validEmail) {
+  if(email === '' || !validEmail) { // TODO: !validEmail? wtf?!
     validationRules.push(validering.INVALID_MAIL)
     console.log(validering.INVALID_MAIL)
   } if(subject.length == 0) {
