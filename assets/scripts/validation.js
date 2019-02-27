@@ -1,5 +1,4 @@
 // TODO: validation.js er ikke lenger ett forklarende nok filnavn :I
-
 const validering = {
   INVALID_MAIL: 'INVALID_MAIL', 
   INVALID_SUBJECT: 'INVALID_SUBJECT',
@@ -12,7 +11,7 @@ let validation = (email, subject, type, text) => {
   const emailRegEx = /^[a-å|0-9._%+-]+@[a-z|0-9.-]+\.[a-z]{2,}$/
   const validEmail = emailRegEx.test(String(email.toLowerCase()))
   const validationRules = []
-  if(email === '' || !validEmail) { // TODO: !validEmail? wtf?!
+  if(email === '' || !validEmail) {
     validationRules.push(validering.INVALID_MAIL)
     console.log(validering.INVALID_MAIL)
   } if(subject.length == 0) {
@@ -20,7 +19,7 @@ let validation = (email, subject, type, text) => {
     console.log(validering.INVALID_SUBJECT)
   } if(type === 'default') {
     validationRules.push(validering.INVALID_TYPE_OF_SERVICE)
-  } if(text.length === 0 || text.length > 150) {
+  } if(text.length === 0 || text.length >= 150) {
     validationRules.push(validering.INVALID_TEXT)
     console.log(validering.INVALID_TEXT)
   } 
