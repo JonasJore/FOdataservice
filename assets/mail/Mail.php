@@ -1,7 +1,7 @@
 <?php 
 // TODO: ytterligere logikk for formulering av eposten som skal sendt.
 // TODO: dette er en dto-klasse... hva gjør business logikk her?!
-class Mail {
+class Mail { // MVC is a biig deal in coding yo
   private $requestBody;
   private $mail;
   private $subject;
@@ -9,7 +9,7 @@ class Mail {
   private $typeOfService;
   
   public function __construct($requestBody) {
-    $this->requestBody = json_decode($requestBody, true); // true betyr at json dekodes til assoc array
+    $this->requestBody = json_decode($requestBody, true); // true => json dekodes til assoc array
     $this->mail = $this->requestBody['mail'];
     $this->subject = $this->requestBody['subject'];
     $this->message = $this->requestBody['text'];
@@ -32,7 +32,7 @@ class Mail {
     return $this->typeOfService;
   }
   
-  public function sendMail($toAdress): void {
+  public function sendMail($toAdress): void { // TODO: denne må være i en egen controller-klasse... []
     mail(
       $toAdress,
       $this->getSubject(),
