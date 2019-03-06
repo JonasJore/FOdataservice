@@ -1,6 +1,7 @@
 <?php 
 // TODO: ytterligere logikk for formulering av eposten som skal sendt.
-// TODO: dette er en dto-klasse... hva gjør business logikk her?!
+// TODO: all businesslogic skal trekkes ut i en egen controller klasse
+// TODO: requestbody skal håndteres på utsiden av denne klassen.
 class Mail { // MVC is a biig deal in coding yo
   private $requestBody;
   private $mail;
@@ -32,7 +33,7 @@ class Mail { // MVC is a biig deal in coding yo
     return $this->typeOfService;
   }
   
-  public function sendMail($toAdress): void { // TODO: denne må være i en egen controller-klasse... []
+  public function sendMail($toAdress): void { // TODO: sendMail() skal trekkes ut i en egen klasse etterhvert
     mail(
       $toAdress,
       $this->getSubject(),
