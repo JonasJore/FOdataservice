@@ -19,16 +19,15 @@ let validation = (email, subject, type, text) => {
     console.log(validering.INVALID_SUBJECT)
   } if(type === 'default') {
     validationRules.push(validering.INVALID_TYPE_OF_SERVICE)
+    console.log(validering.INVALID_TYPE_OF_SERVICE)
   } if(text.length === 0 || text.length >= 150) {
     validationRules.push(validering.INVALID_TEXT)
     console.log(validering.INVALID_TEXT)
   } 
   
   if(noErrors(validationRules)) {
-    let preparedJson = prepareJsonObj(email, subject, type, text)
-    console.log(preparedJson)
+    const preparedJson = prepareJsonObj(email, subject, type, text)
     sendMailRequest(preparedJson)
-    console.log("kva skjer?")
   }
 }
 
@@ -50,7 +49,7 @@ let prepareJsonObj = (mail, subject, type, text) => {
 
 let sendMailRequest = (obj) => {
   const endpoint = 'assets/mail/mailerClient.php'
-  const requestRoute = `http://localhost:80/${endpoint}` // TODO: endres ved produksjonssetting
+  const requestRoute = `http://localhost:80/${endpoint}` // TODO: endres ved prodsetting
   fetch(requestRoute, {
     method: 'post',
     header: {
