@@ -7,5 +7,14 @@ $toAdress = 'jonas.jore@gmail.com'; // verdien satt her vil være den mailadress
 
 $mail = new Mail($requestBody);
 
+// TODO: dette skal trekkes ut av Mail.php
+/*
+  $this->requestBody = json_decode($requestBody, true); // true => json dekodes til assoc array
+  $this->mail = $this->requestBody['mail'];
+  $this->subject = $this->requestBody['subject'];
+  $this->message = $this->requestBody['text'];
+  $this->typeOfService = $this->requestBody['typeOfService'];
+ */
+
 $mail->sendMail($toAdress);
 ?>
