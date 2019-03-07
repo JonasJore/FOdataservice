@@ -1,18 +1,40 @@
-<?php
-public class SendMailController {
-  
-  public function __construct() {
-    
+<?php 
+
+class SendMailController {
+  private $mailClient;
+
+  public function __construct($mail) {
+    $this->mailClient = $mail;
   }
   
-  public function sendMail($toAdress): void {
+  // metode for testing av utvikler
+  public function printStuff(): String {
+    return $this->mailClient->getTypeOfService();
+  }
+  
+  private function setHeaders() {
+    $headers = 'From: ' . $this->mailClient->getFromMail() . "\r\n";
+    $headers .= 'Reply-To: ' . $this->mailClient->getFromMail() . "\r\n";
+    $headers .= 'CC: jonas.jore@gmail.com' . "\r\n";
+    $headers .= 'Content-Type: text/html; charset=UTF-8' . "\r\n";
+    
+    return $headers;
+  }
+  
+  private function setSubject(): String {
+    return $this->mailClient->getSubject();
+  }
+  
+  public function setMailMessage(): String {
+    return file_get_contents('./mailMessageTemplate/MailMessage.html');
+  }
+  
+  public function sendTo($toAdress): void {
     mail(
       $toAdress,
-      $this->getSubject(),
-      $this->getMessage(),
-      'From: Mail sendt kontaktskjema' . '\r\n'.
-      'Reply-To: webmaster@fodataservice.com' . '\r\n'.
-      'X-Mailer: PHP/' . phpversion()
+      $this->setSubject(),
+      $this->setMailMessage(),
+      $this->setHeaders()
     );
-  }k
+  }
 }

@@ -1,36 +1,30 @@
 <?php 
-// TODO: ytterligere logikk for formulering av eposten som skal sendt.
-// TODO: all businesslogic skal trekkes ut i en egen controller klasse
-// TODO: requestbody skal håndteres på utsiden av denne klassen.
-// TODO: sendMail() skal trekkes ut i en egen klasse etterhvert
-public class Mail {
-  private $mail;
+class Mail {
+  private $fromMail;
   private $subject;
-  private $message;
   private $typeOfService;
+  private $message;
   
-  public function __construct($mail, $subject, $message, $typeOfService) {
-    $this->mail = $mail;
+  public function __construct($fromMail, $subject, $typeOfService, $message) {
+    $this->fromMail = $fromMail;
     $this->subject = $subject;
-    $this->message = $message;
     $this->typeOfService = $typeOfService;
+    $this->message = $message;
   }
   
-  private function getMail(): String {
-    return $this->mail;
+  public function getFromMail(): String {
+    return $this->fromMail;
   }
   
-  private function getSubject(): String {
+  public function getSubject(): String {
     return $this->subject;
   }
   
-  private function getMessage(): String {
-    return $this->message;
-  }
-  
-  private function getTypeOfService(): String {
+  public function getTypeOfService(): String {
     return $this->typeOfService;
   }
+  
+  public function getMessage(): String {
+    return $this->message;
+  }  
 }
-
-final class MailClientException extends RuntimeException {}

@@ -1,20 +1,26 @@
 <?php 
 require 'Mail.php';
+require 'SendMailController.php';
+// tar kun imot body'en til post requests fra validering.js. skal være Utilgjengelig for alt annet...
+$requestBody = file_get_contents('php://input');
+$mailRequest = json_decode($requestBody, true);
+$fromMail = $mailRequest['mail'];
+$subject = $mailRequest['subject'];
+$typeOfService = $mailRequest['typeOfService'];
+$mailBody = $mailRequest['text'];
 
-$requestBody = file_get_contents('php://input'); // tar kun imot body'en til post requests fra validering.js. skal være Utilgjengelig for alt annet...
+// adresse, mailen fra kontaktskjema skal sendes til
+// const TOADRESS = 'jonas.jore@gmail.com';
+const ADRESS = 'jonas.jore@gmail.com';
 
-$toAdress = 'jonas.jore@gmail.com'; // verdien satt her vil være den mailadressen som mottar mails fra serveren...
+$mail = new Mail($fromMail, $subject, $typeOfService, $mailBody);
 
-$mail = new Mail($requestBody);
+$mailController = new SendMailController($mail);
 
-// TODO: dette skal trekkes ut av Mail.php
-/*
-  $this->requestBody = json_decode($requestBody, true); // true => json dekodes til assoc array
-  $this->mail = $this->requestBody['mail'];
-  $this->subject = $this->requestBody['subject'];
-  $this->message = $this->requestBody['text'];
-  $this->typeOfService = $this->requestBody['typeOfService'];
- */
+// TODO: dette metode kallet er under konstruksjon
+// $mailController->sendTo(ADRESS);
+echo ADRESS;
+echo $mailController->setMailMessage();
 
-$mail->sendMail($toAdress);
+echo 'koden kjørte uten problemer 👨‍💻💩';
 ?>
