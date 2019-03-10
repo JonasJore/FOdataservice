@@ -26,7 +26,7 @@
       <div id="myTopNav">
         <ul id="navMenu" class="navMenu">
           <li class="navElement" id="homeLink">
-            <a class="navLink" href="#welcomeScreen">FOdataservice</a>
+            <a class="navLink" href="#welcomeScreen">FØdataservice</a>
           </li>
           <li class="navElement" id="aboutLink">
             <a class="navLink" href="#about">Om</a>
@@ -52,13 +52,10 @@
   <section id="welcomeScreen">
     <div class="welcomeCanvas">
       <div class="container">
-        <!-- <div class="row"> -->
         <div class="col-1">
           <h3 id="welcomeText">Velkommen til F.Ø Dataservice</h3>
-          <!-- TODO: vurder å bytt denne knappen med noe mer moderne i bunnen av canvas -->
           <a href="#about" class="button-mainButton">Les mer</a>
         </div>
-        <!-- </div>   -->
       </div>
     </div>
   </section>
@@ -72,13 +69,11 @@
           <p class="lead">
             firmaet er lokalisert i Rjukan, Telemark
           </p>
-
           <a href="https://www.twitch.tv/lcdr_nuttcrack" target="_blank" class="twitch-link">
             <h1>
               <i class="fab fa-twitch twitch-icon"></i>
             </h1>
           </a>
-          <!-- TODO: avklaring om hva som skal stå av tekst her.. -->
         </div>
       </div>
     </div>
@@ -86,7 +81,9 @@
   <section id="services">
     <div class="container-fluid">
       <div class="row text-center serviceBox serviceHeader">
-        Tjenester vi tilbyr
+        <h3>
+          Tjenester vi tilbyr
+        </h3>
       </div>
       <div class="row text-center serviceBox">
         <div class="col-md-4 col-sm-4">
@@ -95,22 +92,20 @@
             Feilsøk og vedlikehold av PC og Serverutstyr
           </h3>
           <p class="lead">
-            Dersom du har problemer, eller bare trenger assistanse med ditt PC utstyr. Dette kan innefatte skade på utstyr, hjelp til å sette opp utstyr, eller å finne ut hvorfor PC'en din ikke lenger yter som den skal.  
+            Dersom du har problemer, eller bare trenger assistanse med ditt PC utstyr. Dette kan innefatte skade på utstyr, hjelp til å sette opp utstyr, eller å finne ut hvorfor PC'en din ikke lenger yter som den skal.
             Stiller vi gjerne opp med sterk kompetanse og profesjonell holdning hvor vårt mål alltid vil være at du igjen skal kunne ha kontroll på din digitale hverdag.
           </p>
         </div>
-        
         <div class="col-md-4 col-sm-4">
           <img src="./assets/img/services/retroKeyboard.jpg" height="250px" width="250px" alt="" class="img-circle img-thumbnail">
           <h3>
             Bygging av PC'er
           </h3>
           <p class="lead">
-            Vi har lang erfaring med bygging av PC'er og kan med dette ta inn en liste med krav som stilles til PC'en som skal bygges og utifra dette, 
+            Vi har lang erfaring med bygging av PC'er og kan med dette ta inn en liste med krav som stilles til PC'en som skal bygges og utifra dette,
             sette sammen et tilbud for en den optimale konfigurasjonen av maskinen som skal utføre de oppgaver du trenger.
           </p>
         </div>
-        
         <div class="col-md-4 col-sm-4">
           <img src="./assets/img/services/fancyDesk.jpg" height="250px" width="250px" alt="" class="img-circle img-thumbnail">
           <h3>
@@ -118,43 +113,40 @@
           </h3>
           <p class="lead">
             Dersom du har et avvik på et nettverksoppsett med medium til stort i størrelse, kan vi stille til assistanse ved å løse dette innen rimelig tid. Ved å sette fagfolk til slike oppgaver, øker sjansen for et bedre vedlikeholdt arbeid
-            og muligheten for å lettere forstå oppsetter for folk som senere kikker på det samme arbeidet. 
+            og muligheten for å lettere forstå oppsetter for folk som senere kikker på det samme arbeidet.
           </p>
         </div>
-        
-        
-        
       </div>
-
       <div class="row text-center serviceBox serviceFooter">
-        Dersom det er noe du trenger hjelp til utover dette, er det bare å ta kontakt med oss for rask respons<br/>
+        <h3>
+          Dersom det er noe du trenger hjelp til utover dette, er det bare å ta kontakt med oss for rask respons
+        </h3><br />
         <a href="#contactFormSection" class="button-mainButton">Ta kontakt</a>
       </div>
     </div>
-
   </section>
   <section id="news">
   </section>
   <section id="contactFormSection">
-    <!-- TODO: er dette noe viktig? -->
-    <!-- 
-      <div class="sectionHeader">
-        Kontakt
-      </div> 
-    -->
     <div class="contactFormBox">
       <form class="contactForm">
         <h3>Ta kontakt</h3>
         <div class="form-group">
-          <label for="emailInput">Epostadresse</label>
+          <label for="emailInput">
+            <h5>Epostadresse</h5>
+          </label>
           <input type="text" class="form-control" id="emailInput" placeholder="navn@eksempel.no">
         </div>
         <div class="form-group">
-          <label for="subjectInput">Emne</label>
+          <label for="subjectInput">
+            <h5>Emne</h5>
+          </label>
           <input type="text" class="form-control" id="subjectInput" placeholder="hei, jeg lurer på...">
         </div>
         <div class="form-group">
-          <label for="typeOfService">Type henvendelse</label>
+          <label for="typeOfService">
+            <h5>Type henvendelse</h5>
+          </label>
           <select class="form-control" id="typeOfService">
             <option selected="selected" value="default">Velg emne</option>
             <option value="Hjemmehjelp">Hjemmehjelp</option>
@@ -164,21 +156,21 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Melding</label>
-          <!-- TODO: bytt id'en til <textarea når mulig -->
-          <textarea class="form-control" id="textArea" rows="3"></textarea>
+          <label for="exampleFormControlTextarea1">
+            <h5>Melding</h5>
+          </label>
+
+          <textarea class="form-control" id="melding" rows="3"></textarea>
         </div>
         <div class="form-group">
           <button type="reset" class="btn btn-outline-danger resetButton">Nullstill</button>
-          <button type="button" class="btn btn-outline-primary submitButton" onclick="validation(emailInput.value, subjectInput.value, typeOfService.value, textArea.value)">Send</button>
+          <button type="button" class="btn btn-outline-primary submitButton" onclick="validation(emailInput.value, subjectInput.value, typeOfService.value, melding.value)">Send</button>
         </div>
       </form>
     </div>
   </section>
   <section id="businessLocation">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002.1649883527548!2d8.588901236636575!3d59.87961019876159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463f5c4bd768ef87%3A0x363398bd201f45ea!2sStorgata+13C%2C+3660+Rjukan!5e0!3m2!1sno!2sno!4v1551037817268"
-      width="100%" height="250px" frameborder="0" style="border:0" allowfullscreen>
-    </iframe>
+
   </section>
   <section id="footerSection">
     <footer>

@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Karla|Lato|Rakkas|Roboto|Ubuntu|Vollkorn');
+
 #navBar {
   z-index: 2;
   position: fixed;
-  font-family: 'Lato';
+  font-family: 'Karla';
   font-size: 1em;
   top: 0;
   left: 0;
