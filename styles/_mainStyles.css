@@ -70,7 +70,7 @@ a:active { text-decoration: none; }
 }
 
 /* styling for infoKnapp som tar deg ned til 'om-seksjonen' */
-.aboutButton {
+.button-mainButton {
   background-color: transparent;
   border-radius: 20px;
   padding: 10%;
@@ -83,9 +83,10 @@ a:active { text-decoration: none; }
   padding: 16px 31px;
   text-decoration: none;
   list-style-type: none;
+  margin-top: 2%;
 }
 
-.aboutButton:hover {
+.button-mainButton:hover {
   transition: all .8s;
   background-color: #ffffff;
   text-decoration: none;
@@ -94,7 +95,7 @@ a:active { text-decoration: none; }
 
 #services {
   width: 100%;
-  height: 1200px;
+  height: 800px;
   text-align: center;
   background-color: #36454f;
 }
@@ -121,6 +122,22 @@ a:active { text-decoration: none; }
   width: 30%;
   position: relative;
   font-family: 'Lato';
+}
+
+.serviceHeader {
+  font-family: 'Roboto';
+  font-size: 4vw;
+}
+
+.serviceFooter {
+  font-family: 'Roboto';
+  font-size: 1vw;
+}
+
+.serviceBox {
+  margin-top: 2%;
+  color: #ffffff;
+  font-family: 'Roboto';
 }
 
 @media screen and (max-width: 1200px) { 

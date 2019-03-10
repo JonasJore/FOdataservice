@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <title>FOdataservice | Din Lokale PC og Server Service</title>
 </head>
+
 <body>
   <section id="navBar">
     <nav class="navbar-main">
@@ -55,7 +56,7 @@
         <div class="col-1">
           <h3 id="welcomeText">Velkommen til F.Ø Dataservice</h3>
           <!-- TODO: vurder å bytt denne knappen med noe mer moderne i bunnen av canvas -->
-          <a href="#about" class="aboutButton">Les mer</a>
+          <a href="#about" class="button-mainButton">Les mer</a>
         </div>
         <!-- </div>   -->
       </div>
@@ -78,70 +79,59 @@
             </h1>
           </a>
           <!-- TODO: avklaring om hva som skal stå av tekst her.. -->
-          <!-- TODO: teksten ser ganske hjemmespikket ut atm. -->
         </div>
       </div>
     </div>
-
-
   </section>
   <section id="services">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12 service-col">
-          <h1>Vi tilbyr blant annet tjenester som</h1>
-        </div>
+      <div class="row text-center serviceBox serviceHeader">
+        Tjenester vi tilbyr
       </div>
-      <div class="row">
-        <div class="col-lg-4 service-col">
-          <h3>Feilsøk og vedlikehold på PC, Servere og nettverksutstyr</h3>
-          <p class="lead">tjenestebeskrivelse</p>
-          <img src="./assets/img/services/bladeServer.jpg" alt="installasjon av blade versåguuuu" class="img-fluid img-rounded"><br>
-          <button type="button" class="btn btn-link">les mer</button>
+      <div class="row text-center serviceBox">
+        <div class="col-md-4 col-sm-4">
+          <img src="./assets/img/services/bladeserver.jpg" height="250px" width="250px" alt="" class="img-circle img-thumbnail">
+          <h3>
+            Feilsøk og vedlikehold av PC og Serverutstyr
+          </h3>
+          <p class="lead">
+            Dersom du har problemer, eller bare trenger assistanse med ditt PC utstyr. Dette kan innefatte skade på utstyr, hjelp til å sette opp utstyr, eller å finne ut hvorfor PC'en din ikke lenger yter som den skal.  
+            Stiller vi gjerne opp med sterk kompetanse og profesjonell holdning hvor vårt mål alltid vil være at du igjen skal kunne ha kontroll på din digitale hverdag.
+          </p>
         </div>
-        <div class="col-lg-4 service-col">
-          <h3>Bygging av PC'er</h3>
-          <p class="lead">tjenestebeskrivelse</p>
-          <img src="./assets/img/services/bladeServer.jpg" alt="installasjon av blade versåguuuu" class="img-fluid img-rounded"><br>
-          <button type="button" class="btn btn-link">les mer</button>
+        
+        <div class="col-md-4 col-sm-4">
+          <img src="./assets/img/services/retroKeyboard.jpg" height="250px" width="250px" alt="" class="img-circle img-thumbnail">
+          <h3>
+            Bygging av PC'er
+          </h3>
+          <p class="lead">
+            Vi har lang erfaring med bygging av PC'er og kan med dette ta inn en liste med krav som stilles til PC'en som skal bygges og utifra dette, 
+            sette sammen et tilbud for en den optimale konfigurasjonen av maskinen som skal utføre de oppgaver du trenger.
+          </p>
         </div>
-        <div class="col-lg-4 service-col">
-          <h3>Bytte av deler på PC og Laptop</h3>
-          <p class="lead">tjenestebeskrivelse</p>
-          <img src="./assets/img/services/bladeServer.jpg" alt="installasjon av blade versåguuuu" class="img-fluid img-rounded"><br>
-          <button type="button" class="btn btn-link">les mer</button>
+        
+        <div class="col-md-4 col-sm-4">
+          <img src="./assets/img/services/fancyDesk.jpg" height="250px" width="250px" alt="" class="img-circle img-thumbnail">
+          <h3>
+            Feilsøk på nettverk og routere
+          </h3>
+          <p class="lead">
+            Dersom du har et avvik på et nettverksoppsett med medium til stort i størrelse, kan vi stille til assistanse ved å løse dette innen rimelig tid. Ved å sette fagfolk til slike oppgaver, øker sjansen for et bedre vedlikeholdt arbeid
+            og muligheten for å lettere forstå oppsetter for folk som senere kikker på det samme arbeidet. 
+          </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 service-col">
-          <h3>Installering og konfigurering av nye og gamle pc'er</h3>
-          <p class="lead">tjenestebeskrivelse</p>
-          <img src="./assets/img/services/bladeServer.jpg" alt="installasjon av blade versåguuuu" class="img-fluid img-rounded"><br>
-          <button type="button" class="btn btn-link">les mer</button>
-        </div>
-        <div class="col-lg-4 service-col">
-          <h3>Fjerne virus og malware</h3>
-          <p class="lead">tjenestebeskrivelse</p>
-          <img src="./assets/img/services/bladeServer.jpg" alt="installasjon av blade versåguuuu" class="img-fluid img-rounded"><br>
-          <button type="button" class="btn btn-link">les mer</button>
-        </div>
-        <div class="col-lg-4 service-col">
-          <h3>Oppsett av nye rutere</h3>
-          <p class="lead">tjenestebeskrivelse</p>
-          <img src="./assets/img/services/bladeServer.jpg" alt="installasjon av blade versåguuuu" class="img-fluid img-rounded"><br>
-          <button type="button" class="btn btn-link">les mer</button>
-        </div>
-        <div class="col-lg-12 service-col">
-          <h3>tjeneste-navn</h3>
-          <p class="lead">tjenestebeskrivelse</p>
-          <img src="./assets/img/services/bladeServer.jpg" alt="installasjon av blade versåguuuu" class="img-fluid img-rounded"><br>
-          <button type="button" class="btn btn-link">les mer</button>
-        </div>
+        
+        
+        
       </div>
 
+      <div class="row text-center serviceBox serviceFooter">
+        Dersom det er noe du trenger hjelp til utover dette, er det bare å ta kontakt med oss for rask respons<br/>
+        <a href="#contactFormSection" class="button-mainButton">Ta kontakt</a>
+      </div>
     </div>
-    <!-- Modal -->
-    
+
   </section>
   <section id="news">
   </section>

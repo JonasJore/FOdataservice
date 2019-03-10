@@ -29,6 +29,7 @@ class SendMailController {
     return file_get_contents('./mailMessageTemplate/MailMessage.html');
   }
   
+  // mail blir sendt ved kall til denne metoden.
   public function sendTo($toAdress): void {
     mail(
       $toAdress,
