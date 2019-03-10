@@ -1,6 +1,6 @@
 <?php 
-require 'Mail.php';
-require 'SendMailController.php';
+require_once 'Mail.php';
+require_once 'SendMailController.php';
 // tar kun imot body'en til post requests fra validering.js. skal være Utilgjengelig for alt annet...
 $requestBody = file_get_contents('php://input');
 $mailRequest = json_decode($requestBody, true);

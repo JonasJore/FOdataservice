@@ -25,8 +25,8 @@ class SendMailController {
     return $this->mailClient->getSubject();
   }
   
-  public function setMailMessage(): String {
-    return file_get_contents('./mailMessageTemplate/MailMessage.html');
+  private function formatMailMessage(): String {
+    return "herro";
   }
   
   // mail blir sendt ved kall til denne metoden.
@@ -34,7 +34,7 @@ class SendMailController {
     mail(
       $toAdress,
       $this->setSubject(),
-      $this->setMailMessage(),
+      $this->formatMailMessage(),
       $this->setHeaders()
     );
   }
