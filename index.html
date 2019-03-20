@@ -131,19 +131,19 @@
     <div class="contactFormBox">
       <form class="contactForm">
         <h3>Ta kontakt</h3>
-        <div class="form-group">
+        <div class="form-group" id="emailInputField">
           <label for="emailInput">
             <h5>Epostadresse</h5>
           </label>
           <input type="text" class="form-control" id="emailInput" placeholder="navn@eksempel.no">
         </div>
-        <div class="form-group">
+        <div class="form-group" id="subjectField">
           <label for="subjectInput">
             <h5>Emne</h5>
           </label>
           <input type="text" class="form-control" id="subjectInput" placeholder="hei, jeg lurer på...">
         </div>
-        <div class="form-group">
+        <div class="form-group" id="typeOfServiceField">
           <label for="typeOfService">
             <h5>Type henvendelse</h5>
           </label>
@@ -155,16 +155,16 @@
             <option value="Skryt/Tilbakemelding">Skryt eller tilbakemelding</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">
+        <div class="form-group" id="textField">
+          <label for="textBody">
             <h5>Melding</h5>
           </label>
 
-          <textarea class="form-control" id="melding" rows="3"></textarea>
+          <textarea class="form-control" id="textBody" rows="3"></textarea>
         </div>
         <div class="form-group">
           <button type="reset" class="btn btn-outline-danger resetButton">Nullstill</button>
-          <button type="button" class="btn btn-outline-primary submitButton" onclick="validation(emailInput.value, subjectInput.value, typeOfService.value, melding.value)">Send</button>
+          <button type="button" class="btn btn-outline-primary submitButton" onclick="validation(emailInput.value, subjectInput.value, typeOfService.value, textBody.value)">Send</button>
         </div>
       </form>
     </div>
