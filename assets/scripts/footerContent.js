@@ -1,5 +1,5 @@
 let printCopyright = () => {
-  return `&copy; ${new Date().getFullYear()}`
-}
+  return `&copy; ${new Date().getFullYear()}`;
+};
 
-document.write(printCopyright())
+document.write(printCopyright());

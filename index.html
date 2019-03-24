@@ -1,194 +1,247 @@
 <!DOCTYPE html>
 <html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- favicon for browser tab: -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./assets/img/faviconEx.png"
+    />
+    <!-- custom css: -->
+    <link rel="stylesheet" type="text/css" href="styles/_mainStyles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/_navBar.css" />
+    <!-- bootstrap: -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="bootstrap/css/bootstrap.min.css"
+    />
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <title>FOdataservice | Din Lokale PC og Server Service</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- favicon for browser tab: -->
-  <link rel="shortcut icon" type="image/png" href="./assets/img/faviconEx.png">
-  <!-- custom css: -->
-  <link rel="stylesheet" type="text/css" href="styles/_mainStyles.css">
-  <link rel="stylesheet" type="text/css" href="styles/_navBar.css">
-  <!-- bootstrap: -->
-  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-  <!-- fontawesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <title>FOdataservice | Din Lokale PC og Server Service</title>
-</head>
-
-<body>
-  <section id="navBar">
-    <nav class="navbar-main">
-      <div id="myTopNav">
-        <ul id="navMenu" class="navMenu">
-          <li class="navElement" id="homeLink">
-            <a class="navLink" href="#welcomeScreen">FØdataservice</a>
-          </li>
-          <li class="navElement" id="aboutLink">
-            <a class="navLink" href="#about">Om</a>
-          </li>
-          <li class="navElement" id="servicesLink">
-            <a class="navLink" href="#services">Tjenester</a>
-          </li>
-          <li class="navElement" id="newsLink">
-            <a class="navLink" href="#news">Nytt</a>
-          </li>
-          <li class="navElement" id="contactLink">
-            <a class="navLink" href="#contactFormSection">Kontakt</a>
-          </li>
-          <li class="navElement" id="burger">
-            <a href="javascript:void(0);" class="burgerIcon" onclick="expandMenu()">
-              <i class="fa fa-bars" id="burgerFavicon"></i>
-            </a>
-          </li>
-        </ul>
+  <body>
+    <section id="navBar">
+      <nav class="navbar-main">
+        <div id="myTopNav">
+          <ul id="navMenu" class="navMenu">
+            <li class="navElement" id="homeLink">
+              <a class="navLink" href="#welcomeScreen">FØdataservice</a>
+            </li>
+            <li class="navElement" id="aboutLink">
+              <a class="navLink" href="#about">Om</a>
+            </li>
+            <li class="navElement" id="servicesLink">
+              <a class="navLink" href="#services">Tjenester</a>
+            </li>
+            <li class="navElement" id="newsLink">
+              <a class="navLink" href="#news">Nytt</a>
+            </li>
+            <li class="navElement" id="contactLink">
+              <a class="navLink" href="#contactFormSection">Kontakt</a>
+            </li>
+            <li class="navElement" id="burger">
+              <a
+                href="javascript:void(0);"
+                class="burgerIcon"
+                onclick="expandMenu()"
+              >
+                <i class="fa fa-bars" id="burgerFavicon"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <section id="welcomeScreen">
+      <div class="welcomeCanvas">
+        <div class="container">
+          <div class="col-1">
+            <h3 id="welcomeText">Velkommen til F.Ø Dataservice</h3>
+            <a href="#about" class="button-mainButton">Les mer</a>
+          </div>
+        </div>
       </div>
-    </nav>
-  </section>
-  <section id="welcomeScreen">
-    <div class="welcomeCanvas">
+    </section>
+    <section id="about">
       <div class="container">
-        <div class="col-1">
-          <h3 id="welcomeText">Velkommen til F.Ø Dataservice</h3>
-          <a href="#about" class="button-mainButton">Les mer</a>
+        <div class="row">
+          <div class="col-3">
+            <p class="lead">
+              F.Ø Dataservice er et lite og lokalt, teknisk foretak som leverer
+              en rekke datatjenester
+            </p>
+            <p class="lead">firmaet er lokalisert i Rjukan, Telemark</p>
+            <a
+              href="https://www.twitch.tv/lcdr_nuttcrack"
+              target="_blank"
+              class="twitch-link"
+            >
+              <h1><i class="fab fa-twitch twitch-icon"></i></h1>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-3">
-          <p class="lead">
-            F.Ø Dataservice er et lite og lokalt, teknisk foretak som leverer en rekke datatjenester
-          </p>
-          <p class="lead">
-            firmaet er lokalisert i Rjukan, Telemark
-          </p>
-          <a href="https://www.twitch.tv/lcdr_nuttcrack" target="_blank" class="twitch-link">
-            <h1>
-              <i class="fab fa-twitch twitch-icon"></i>
-            </h1>
+    </section>
+    <section id="services">
+      <div class="container-fluid">
+        <div class="row text-center serviceBox serviceHeader">
+          <h3>Tjenester vi tilbyr</h3>
+        </div>
+        <div class="row text-center serviceBox">
+          <div class="col-md-4 col-sm-4">
+            <img
+              src="./assets/img/services/bladeserver.jpg"
+              height="250px"
+              width="250px"
+              alt=""
+              class="img-circle img-thumbnail"
+            />
+            <h3>Feilsøk og vedlikehold av PC og Serverutstyr</h3>
+            <p class="lead">
+              Dersom du har problemer, eller bare trenger assistanse med ditt PC
+              utstyr. Dette kan innefatte skade på utstyr, hjelp til å sette opp
+              utstyr, eller å finne ut hvorfor PC'en din ikke lenger yter som
+              den skal. Stiller vi gjerne opp med sterk kompetanse og
+              profesjonell holdning hvor vårt mål alltid vil være at du igjen
+              skal kunne ha kontroll på din digitale hverdag.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <img
+              src="./assets/img/services/retroKeyboard.jpg"
+              height="250px"
+              width="250px"
+              alt=""
+              class="img-circle img-thumbnail"
+            />
+            <h3>Bygging av PC'er</h3>
+            <p class="lead">
+              Vi har lang erfaring med bygging av PC'er og kan med dette ta inn
+              en liste med krav som stilles til PC'en som skal bygges og utifra
+              dette, sette sammen et tilbud for en den optimale konfigurasjonen
+              av maskinen som skal utføre de oppgaver du trenger.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <img
+              src="./assets/img/services/fancyDesk.jpg"
+              height="250px"
+              width="250px"
+              alt=""
+              class="img-circle img-thumbnail"
+            />
+            <h3>Feilsøk på nettverk og routere</h3>
+            <p class="lead">
+              Dersom du har et avvik på et nettverksoppsett med medium til stort
+              i størrelse, kan vi stille til assistanse ved å løse dette innen
+              rimelig tid. Ved å sette fagfolk til slike oppgaver, øker sjansen
+              for et bedre vedlikeholdt arbeid og muligheten for å lettere
+              forstå oppsetter for folk som senere kikker på det samme arbeidet.
+            </p>
+          </div>
+        </div>
+        <div class="row text-center serviceBox serviceFooter">
+          <h3>
+            Dersom det er noe du trenger hjelp til utover dette, er det bare å
+            ta kontakt med oss for rask respons
+          </h3>
+          <br />
+          <a href="#contactFormSection" class="button-mainButton">Ta kontakt</a>
+        </div>
+      </div>
+    </section>
+    <section id="news"></section>
+    <section id="contactFormSection">
+      <div class="contactFormBox">
+        <form class="contactForm">
+          <h3>Ta kontakt</h3>
+          <div class="form-group" id="emailInputField">
+            <label for="emailInput"> <h5>Epostadresse</h5> </label>
+            <input
+              type="text"
+              class="form-control"
+              id="emailInput"
+              placeholder="navn@eksempel.no"
+            />
+          </div>
+          <div class="form-group" id="subjectField">
+            <label for="subjectInput"> <h5>Emne</h5> </label>
+            <input
+              type="text"
+              class="form-control"
+              id="subjectInput"
+              placeholder="hei, jeg lurer på..."
+            />
+          </div>
+          <div class="form-group" id="typeOfServiceField">
+            <label for="typeOfService"> <h5>Type henvendelse</h5> </label>
+            <select class="form-control" id="typeOfService">
+              <option selected="selected" value="default">Velg emne</option>
+              <option value="Hjemmehjelp">Hjemmehjelp</option>
+              <option value="Fjernhjelp">Fjernhjelp</option>
+              <option value="Generelt Spørsmål">Generelt Spørsmål</option>
+              <option value="Skryt/Tilbakemelding"
+                >Skryt eller tilbakemelding</option
+              >
+            </select>
+          </div>
+          <div class="form-group" id="textField">
+            <label for="textBody"> <h5>Melding</h5> </label>
+
+            <textarea class="form-control" id="textBody" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="reset" class="btn btn-outline-danger resetButton">
+              Nullstill
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-primary submitButton"
+              onclick="validation(emailInput.value, subjectInput.value, typeOfService.value, textBody.value)"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+      <div id="validationResponse"></div>
+    </section>
+    <section id="businessLocation">
+      <!-- TODO: bra kartløsning må til her ja -->
+    </section>
+    <section id="footerSection">
+      <footer>
+        <h3>Du har nå nådd bunnen til FØdataservice</h3>
+        <div class="copyrightText">
+          <script
+            type="text/javascript"
+            id="madeByLink"
+            src="assets/scripts/footerContent.js"
+          ></script>
+          <a href="https://www.github.com/jonasjore" class="devLink">Jore</a> -
+          all rights reserved <br />
+          mail:
+          <a
+            href="mailto:support@fodataservice.com?subject=Jeg lurer på en ting"
+          >
+            <span class="fa fa-envelope" id="mailIcon"></span>
           </a>
+          | <span class="fa fa-phone phoneNumber"></span> +4795130885
         </div>
-      </div>
-    </div>
-  </section>
-  <section id="services">
-    <div class="container-fluid">
-      <div class="row text-center serviceBox serviceHeader">
-        <h3>
-          Tjenester vi tilbyr
-        </h3>
-      </div>
-      <div class="row text-center serviceBox">
-        <div class="col-md-4 col-sm-4">
-          <img src="./assets/img/services/bladeserver.jpg" height="250px" width="250px" alt="" class="img-circle img-thumbnail">
-          <h3>
-            Feilsøk og vedlikehold av PC og Serverutstyr
-          </h3>
-          <p class="lead">
-            Dersom du har problemer, eller bare trenger assistanse med ditt PC utstyr. Dette kan innefatte skade på utstyr, hjelp til å sette opp utstyr, eller å finne ut hvorfor PC'en din ikke lenger yter som den skal.
-            Stiller vi gjerne opp med sterk kompetanse og profesjonell holdning hvor vårt mål alltid vil være at du igjen skal kunne ha kontroll på din digitale hverdag.
-          </p>
-        </div>
-        <div class="col-md-4 col-sm-4">
-          <img src="./assets/img/services/retroKeyboard.jpg" height="250px" width="250px" alt="" class="img-circle img-thumbnail">
-          <h3>
-            Bygging av PC'er
-          </h3>
-          <p class="lead">
-            Vi har lang erfaring med bygging av PC'er og kan med dette ta inn en liste med krav som stilles til PC'en som skal bygges og utifra dette,
-            sette sammen et tilbud for en den optimale konfigurasjonen av maskinen som skal utføre de oppgaver du trenger.
-          </p>
-        </div>
-        <div class="col-md-4 col-sm-4">
-          <img src="./assets/img/services/fancyDesk.jpg" height="250px" width="250px" alt="" class="img-circle img-thumbnail">
-          <h3>
-            Feilsøk på nettverk og routere
-          </h3>
-          <p class="lead">
-            Dersom du har et avvik på et nettverksoppsett med medium til stort i størrelse, kan vi stille til assistanse ved å løse dette innen rimelig tid. Ved å sette fagfolk til slike oppgaver, øker sjansen for et bedre vedlikeholdt arbeid
-            og muligheten for å lettere forstå oppsetter for folk som senere kikker på det samme arbeidet.
-          </p>
-        </div>
-      </div>
-      <div class="row text-center serviceBox serviceFooter">
-        <h3>
-          Dersom det er noe du trenger hjelp til utover dette, er det bare å ta kontakt med oss for rask respons
-        </h3><br />
-        <a href="#contactFormSection" class="button-mainButton">Ta kontakt</a>
-      </div>
-    </div>
-  </section>
-  <section id="news">
-  </section>
-  <section id="contactFormSection">
-    <div class="contactFormBox">
-      <form class="contactForm">
-        <h3>Ta kontakt</h3>
-        <div class="form-group" id="emailInputField">
-          <label for="emailInput">
-            <h5>Epostadresse</h5>
-          </label>
-          <input type="text" class="form-control" id="emailInput" placeholder="navn@eksempel.no">
-        </div>
-        <div class="form-group" id="subjectField">
-          <label for="subjectInput">
-            <h5>Emne</h5>
-          </label>
-          <input type="text" class="form-control" id="subjectInput" placeholder="hei, jeg lurer på...">
-        </div>
-        <div class="form-group" id="typeOfServiceField">
-          <label for="typeOfService">
-            <h5>Type henvendelse</h5>
-          </label>
-          <select class="form-control" id="typeOfService">
-            <option selected="selected" value="default">Velg emne</option>
-            <option value="Hjemmehjelp">Hjemmehjelp</option>
-            <option value="Fjernhjelp">Fjernhjelp</option>
-            <option value="Generelt Spørsmål">Generelt Spørsmål</option>
-            <option value="Skryt/Tilbakemelding">Skryt eller tilbakemelding</option>
-          </select>
-        </div>
-        <div class="form-group" id="textField">
-          <label for="textBody">
-            <h5>Melding</h5>
-          </label>
-
-          <textarea class="form-control" id="textBody" rows="3"></textarea>
-        </div>
-        <div class="form-group">
-          <button type="reset" class="btn btn-outline-danger resetButton">Nullstill</button>
-          <button type="button" class="btn btn-outline-primary submitButton" onclick="validation(emailInput.value, subjectInput.value, typeOfService.value, textBody.value)">Send</button>
-        </div>
-      </form>
-      <div id="validationResponse">
-        
-      </div>
-    </div>
-  </section>
-  <section id="businessLocation">
-
-  </section>
-  <section id="footerSection">
-    <footer>
-      <h3>Du har nå nådd bånn</h3>
-      <div class="copyrightText">
-        <script type="text/javascript" id="madeByLink" src="assets/scripts/footerContent.js"></script>
-        <a href="https://www.github.com/jonasjore" class="devLink">Jore</a> - all rights reserved <br />
-        mail:
-        <a href="mailto:support@fodataservice.com?subject=Jeg lurer på en ting">
-          <span class="fa fa-envelope" id="mailIcon"></span>
-        </a>
-        | <span class="fa fa-phone phoneNumber"></span> +4795130885
-      </div>
-    </footer>
-  </section>
-  <script type="text/javascript" src="assets/scripts/burgerMenu.js"></script>
-  <script type="text/javascript" src="assets/scripts/validation.js"></script>
-</body>
-
+      </footer>
+    </section>
+    <script type="text/javascript" src="assets/scripts/burgerMenu.js"></script>
+    <script type="text/javascript" src="assets/scripts/validation.js"></script>
+  </body>
 </html>
