@@ -167,6 +167,10 @@ a:active { text-decoration: none; }
   background-color: transparent;
 }
 
+#textBody {
+  resize: none;
+}
+
 footer {
   text-align: center;
   color: #fff;

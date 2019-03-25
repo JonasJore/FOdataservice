@@ -1,4 +1,6 @@
-// TODO: validation.js er ikke lenger ett forklarende nok filnavn :I
+// TODO: validation.js er ikke lenger ett forklarende nok filnavn :I (09.01.19)
+// TODO: finn en bedre løsning for hvordan validationError får verdiene sine.
+//       mulig forslag: bruk funksjonene som sjekker hvilke regler som er i bruk (25.03.19)
 const validering = {
   INVALID_MAIL: "INVALID_MAIL",
   INVALID_SUBJECT: "INVALID_SUBJECT",
@@ -11,9 +13,13 @@ let validation = (email, subject, type, text) => {
   const emailRegEx = /^[a-å|0-9._%+-]+@[a-z|0-9.-]+\.[a-z]{2,}$/;
   const validEmail = emailRegEx.test(String(email.toLowerCase()));
   const validationRules = [];
+  const validationErrorMessages = [];
 
   if (email === "" || !validEmail) {
     validationRules.push(validering.INVALID_MAIL);
+    validationErrorMessages.push(
+      "ugyldig epostadresse, venligst fyll inn dette riktig"
+    );
     changeInputFrameUponValidation("emailInputField", "fail");
   } else {
     changeInputFrameUponValidation("emailInputField", "success");
@@ -21,6 +27,7 @@ let validation = (email, subject, type, text) => {
 
   if (subject.length == 0) {
     validationRules.push(validering.INVALID_SUBJECT);
+    validationErrorMessages.push("ugydlig emne");
     changeInputFrameUponValidation("subjectField", "fail");
   } else {
     changeInputFrameUponValidation("subjectField", "success");
@@ -28,6 +35,7 @@ let validation = (email, subject, type, text) => {
 
   if (type === "default") {
     validationRules.push(validering.INVALID_TYPE_OF_SERVICE);
+    validationErrorMessages.push("type henvendelse mangler");
     changeInputFrameUponValidation("typeOfServiceField", "fail");
   } else {
     changeInputFrameUponValidation("typeOfServiceField", "success");
@@ -35,6 +43,9 @@ let validation = (email, subject, type, text) => {
 
   if (text.length === 0 || text.length >= 150) {
     validationRules.push(validering.INVALID_TEXT);
+    validationErrorMessages.push(
+      "teksten du har fylt inn er ugyldig. husk at en melding ikke kan være lenger enn 150 tegn"
+    );
     changeInputFrameUponValidation("textField", "fail");
   } else {
     changeInputFrameUponValidation("textField", "success");
@@ -45,8 +56,7 @@ let validation = (email, subject, type, text) => {
     sendMailRequest(preparedJson);
   } else {
     //console.log(validationRules)
-
-    printValidationErrorMessages(validationRules);
+    printValidationErrorMessages(validationErrorMessages);
   }
 };
 
@@ -73,13 +83,13 @@ let changeInputFrameUponValidation = (idValue, rule) => {
     : (document.getElementById(idValue).className = "form-group has-error");
 };
 
-let printValidationErrorMessages = validationRules => {
+let printValidationErrorMessages = validationErrorMessages => {
   // TODO: dette må forbedres
   document.getElementById("validationResponse").className =
     "alert alert-danger";
   let ul = "<ul>";
-  validationRules.forEach(validationRule => {
-    ul += "<li>" + validationRule + "</li>";
+  validationErrorMessages.forEach(validationErrorMessage => {
+    ul += "<li>" + validationErrorMessage + "</li>";
   });
   ul += "</ul>";
   console.log(ul);
