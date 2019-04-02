@@ -3,7 +3,7 @@
 #navBar {
   z-index: 2;
   position: fixed;
-  font-family: 'Karla';
+  font-family: 'Roboto';
   font-size: 1em;
   top: 0;
   left: 0;
@@ -46,7 +46,6 @@
 #servicesLink, #newsLink, #contactLink { margin-left: 15%; }
 
 @media screen and (max-width: 1000px) {
-
   .navMenu .navElement:not(:first-child) { display: none; }
   
   .navMenu .navElement:last-child {
@@ -70,7 +69,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-  
   .navMenu.responsiveMenu { position: relative; }
   
   .navElement .navLink:first-child { margin-left: 1px; }
@@ -94,5 +92,4 @@
     left: 0;
     font-size: 5vw;
   }
-  
 }
