@@ -12,6 +12,7 @@
                                              
 TODO: alle section tags skal bruke id fremfor class...                                             
 TODO: rare css regler kan få en liten forklaring til senere vedlikehold :)
+TODO: vurder å samle all .css her
 */
  @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Karla|Lato|Rakkas|Roboto|Ubuntu|Vollkorn');
 
@@ -25,9 +26,11 @@ html {
   overflow-x: auto;
 }
 
-section { 
-  text-align: center; 
-}
+section { text-align: center; }
+
+::selection { background: #e1e1e1; }
+
+::-moz-selection { background: #e1e1e1;}
 
 a:link { text-decoration: none; }
 
@@ -59,6 +62,7 @@ a:active { text-decoration: none; }
 #welcomeText {
   color: white;
   font-size: 4vw;
+  text-shadow: 2px 2px 2px black;
 }
 
 #about {
