@@ -25,7 +25,7 @@ let validation = (email, subject, type, text) => {
 
   if (subject.length == 0 || checkWhitespace(subject)) {
     validationRules.push(validering.INVALID_SUBJECT)
-    validationErrorMessages.push('ugydlig emne')
+    validationErrorMessages.push('emnet er ugyldig')
     changeInputFrameUponValidation('subjectField', 'fail')
   } else {
     changeInputFrameUponValidation('subjectField', 'success')
