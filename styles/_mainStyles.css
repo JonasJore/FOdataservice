@@ -91,8 +91,6 @@ a:active { text-decoration: none; }
   height: auto;
   display: flex;
   align-items: center;
-  /* background: url('../assets/img/wallpapeEx2.jpg') no-repeat center; */
-  /* background: url('../assets/img/GtoppBG.jpg') no-repeat center; */
   background: transparent;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -104,8 +102,13 @@ a:active { text-decoration: none; }
 }
 
 #particles-js {
-  background: url('../assets/img/GtoppBG.jpg') no-repeat center;
   z-index: 1;
+  background: url('../assets/img/GtoppBG.jpg') no-repeat center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   /* background-color: transparent; */
   width: 100%;
   min-height: inherit;
