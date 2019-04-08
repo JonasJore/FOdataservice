@@ -15,12 +15,7 @@
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
   <!-- fontawesome -->
-  <link 
-    rel="stylesheet" 
-    href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
-    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
-    crossorigin="anonymous" 
-  />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
   <title>FOdataservice | Din Lokale PC og Server Service</title>
 </head>
 
@@ -55,7 +50,8 @@
   </section>
   <section id="welcomeScreen">
     <!-- TODO: få particlesJS til å virke pls -->
-    <div class="welcomeCanvas" id="particles-js">
+    <div id="particles-js"></div>
+    <div class="welcomeCanvas">
       <div class="container">
         <div class="col-1">
           <h3 id="welcomeText">Velkommen til F.Ø Dataservice</h3>
@@ -63,17 +59,19 @@
         </div>
       </div>
     </div>
+
+
   </section>
   <section id="about">
     <div class="container">
       <div class="row">
         <div class="col-3">
           <h2>Vi ønsker å hjelpe deg med å nå dine mål</h2>
-          <hr class="half-ruler"/>
+          <hr class="half-ruler" />
           <p class="lead">
             F.Ø Dataservice er et lite og lokalt, teknisk foretak som leverer
             en rekke løsninger innenfor data og teknologi for deg og ditt firma.
-            Med lang erfaring innen IT og drift kan vi med sikkerhet si at vi er opptatt av å levere arbeid av høy kvalitet og sikkerhet. 
+            Med lang erfaring innen IT og drift kan vi med sikkerhet si at vi er opptatt av å levere arbeid av høy kvalitet og sikkerhet.
           </p>
           <p class="lead">
             Vi har alltid vært glad i å lære mer om teknologi og hvordan det kan brukes til å effektivisere folks arbeidshverdag,
@@ -138,7 +136,7 @@
     </div>
   </section>
   <section id="news">
-    
+
   </section>
   <section id="contactFormSection">
     <div class="contactFormBox">
@@ -173,8 +171,8 @@
             <h5>Melding</h5>
           </label>
           <textarea class="form-control" id="textBody" rows="3">
-            
-            
+
+
           </textarea>
         </div>
         <div class="form-group">
@@ -198,7 +196,7 @@
       <div class="copyrightText">
         <script type="text/javascript" id="madeByLink" src="assets/scripts/footerContent.js"></script>
         <a href="https://www.linkedin.com/in/jonasjore/" class="devLink">Jonas Jore</a> -
-        all rights reserved <br />        
+        all rights reserved <br />
         mail:
         <a href="mailto:support@fodataservice.com?subject=Jeg lurer på en ting">
           <span class="fa fa-envelope" id="mailIcon"></span>
@@ -209,6 +207,8 @@
   </section>
   <script type="text/javascript" src="assets/scripts/burgerMenu.js"></script>
   <script type="text/javascript" src="assets/scripts/validation.js"></script>
+  <script type="text/javascript" src="assets/scripts/particles.js"></script>
+  <script type="text/javascript" src="assets/scripts/app.js"></script>
 </body>
 
 </html>

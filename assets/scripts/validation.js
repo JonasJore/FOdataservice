@@ -56,20 +56,20 @@ let validation = (email, subject, type, text) => {
   }
 }
 
-const validMail = validationArr => validationArr.includes(validering.INVALID_MAIL)
-const validSubject = validationArr => validationArr.includes(validering.INVALID_SUBJECT)
-const validTypeOfService = validationArr => validationArr.includes(validering.INVALID_TYPE_OF_SERVICE)
-const validText = validationArr => validationArr.includes(validering.INVALID_TEXT)
+const validMail = validationArr => !validationArr.includes(validering.INVALID_MAIL)
+const validSubject = validationArr => !validationArr.includes(validering.INVALID_SUBJECT)
+const validTypeOfService = validationArr => !validationArr.includes(validering.INVALID_TYPE_OF_SERVICE)
+const validText = validationArr => !validationArr.includes(validering.INVALID_TEXT)
   
 const checkWhitespace = string => {
   return !string.replace(/\s/g, '')  
 }
 
 let noErrors = validationArr =>
-  !validMail(validationArr) &&
-  !validSubject(validationArr) &&
-  !validTypeOfService(validationArr) &&
-  !validText(validationArr)
+  validMail(validationArr) &&
+  validSubject(validationArr) &&
+  validTypeOfService(validationArr) &&
+  validText(validationArr)
 
 // TODO: vurder et bedre navn for denne funksjonen
 let changeInputFrameUponValidation = (idValue, rule) => {

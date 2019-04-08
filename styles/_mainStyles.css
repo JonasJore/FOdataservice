@@ -38,7 +38,7 @@ a:visited { text-decoration: none; }
 a:active { text-decoration: none; }
 
 #navBar {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   font-family: 'Roboto';
   font-size: 1em;
@@ -85,13 +85,15 @@ a:active { text-decoration: none; }
 #welcomeScreen { min-height: 100vh;}
 
 .welcomeCanvas {
+  z-index: 2;
   width: 100%;
   min-height: inherit;
   height: auto;
   display: flex;
   align-items: center;
   /* background: url('../assets/img/wallpapeEx2.jpg') no-repeat center; */
-  background: url('../assets/img/GtoppBG.jpg') no-repeat center;
+  /* background: url('../assets/img/GtoppBG.jpg') no-repeat center; */
+  background: transparent;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -101,7 +103,19 @@ a:active { text-decoration: none; }
   top: 0px;
 }
 
+#particles-js {
+  background: url('../assets/img/GtoppBG.jpg') no-repeat center;
+  z-index: 1;
+  /* background-color: transparent; */
+  width: 100%;
+  min-height: inherit;
+  height: auto;
+  display: block;
+  position: absolute;
+}
+
 #welcomeText {
+  z-index: 3;
   color: white;
   font-size: 4vw;
   text-shadow: 2px 2px 2px black;
@@ -126,6 +140,7 @@ a:active { text-decoration: none; }
 
 /* styling for infoKnapp som tar deg ned til 'om-seksjonen' */
 .button-mainButton {
+  z-index: 3
   background-color: transparent;
   border-radius: 20px;
   padding: 10%;
