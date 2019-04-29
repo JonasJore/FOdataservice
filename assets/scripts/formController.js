@@ -108,7 +108,7 @@ let prepareJsonObj = (mail, subject, typeOfService, text) => {
 
 let sendMailRequest = obj => {
 	const endpoint = 'assets/mail/mailerClient.php'
-	const requestRoute = `https:/fodataservice.com/${endpoint}` // TODO: endres ved prodsetting
+	const requestRoute = `https:/fodataservice.com/${endpoint}`
 
 	fetch(requestRoute, {
 		method: 'post',
