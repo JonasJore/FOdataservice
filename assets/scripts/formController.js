@@ -74,7 +74,6 @@ let noErrors = validationArr =>
 	validTypeOfService(validationArr) &&
 	validText(validationArr)
 
-// TODO: vurder et bedre navn for denne funksjonen
 let changeInputFrameUponValidation = (idValue, rule) => {
 	return rule === 'success'
 		? (document.getElementById(idValue).className = 'form-group has-success')
@@ -109,7 +108,8 @@ let prepareJsonObj = (mail, subject, typeOfService, text) => {
 
 let sendMailRequest = obj => {
 	const endpoint = 'assets/mail/mailerClient.php'
-	const requestRoute = `http://localhost:80/${endpoint}` // TODO: endres ved prodsetting
+	const requestRoute = `https:/fodataservice.com/${endpoint}` // TODO: endres ved prodsetting
+
 	fetch(requestRoute, {
 		method: 'post',
 		header: {
@@ -118,6 +118,6 @@ let sendMailRequest = obj => {
 		},
 		body: obj
 	}).then(response => {
-		console.log(`${obj} er sendt avgårde nu...`)
+		console.log(response)
 	})
 }

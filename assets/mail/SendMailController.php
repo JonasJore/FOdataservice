@@ -20,7 +20,7 @@ class SendMailController {
     
     return $headers;
   }
-  
+
   // mail blir sendt ved kall til denne metoden.
   public function sendTo($toAdress): void {
     mail(
