@@ -9,9 +9,6 @@
 ░ ░     ▒ ░   ░   ░ ░    ░   ░ ░    ░ ░ ░ ▒   ▒ ▒ ░░  ░  ░  ░    ░         ░    ▒ ░   ░   ░ ░ 
        ░           ░          ░        ░ ░   ░ ░           ░              ░  ░ ░           ░ 
                                              ░ ░ 
-                                             
-TODO: alle section tags skal bruke id fremfor class...                                             
-TODO: rare css regler kan få en liten forklaring til senere vedlikehold :)
 */
  @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Karla|Lato|Rakkas|Roboto|Ubuntu|Vollkorn'); 
 
@@ -103,7 +100,7 @@ a:active { text-decoration: none; }
 
 #particles-js {
   z-index: 1;
-  background: url('../assets/img/GtoppBG.jpg') no-repeat center;
+  background: url('../assets/img/backgrounds/GaustatoppenBG.jpg') no-repeat center;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -124,26 +121,9 @@ a:active { text-decoration: none; }
   text-shadow: 2px 2px 2px black;
 }
 
-#about {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  font-family: 'Lato';
-}
-
-.half-ruler {
-  position: relative;
-  left: 25%;
-  right: 25%;
-  text-align: inherit;
-  width: 50%;
-}
-
 /* styling for infoKnapp som tar deg ned til 'om-seksjonen' */
 .button-mainButton {
-  z-index: 3
+  z-index: 3;
   background-color: transparent;
   border-radius: 20px;
   padding: 10%;
@@ -166,6 +146,24 @@ a:active { text-decoration: none; }
   color: #000000;
 }
 
+.half-ruler {
+  position: relative;
+  left: 25%;
+  right: 25%;
+  text-align: inherit;
+  width: 50%;
+}
+
+/* page sections */
+#about {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-family: 'Lato';
+}
+
 #services {
   width: 100%;
   min-height: 100vh;
@@ -178,7 +176,7 @@ a:active { text-decoration: none; }
   width: 100%;
   min-height: 40vh;
   background-color: #dcdcdc;
-  background: url('../assets/img/RjukanDalen.jpg') no-repeat center;
+  background: url('../assets/img/backgrounds/VestfjorddalenBG.jpg') no-repeat center;
   background-attachment: fixed;
   -moz-background-size: cover;
   background-size: cover;
@@ -190,14 +188,7 @@ a:active { text-decoration: none; }
   background-color: #e1e1e1;
 }
 
-.contactFormBox {
-  height: 60%;
-  width: 50%;
-  position: relative;
-  left: 25%;
-  right: 25%;
-  overflow: hidden;
-}
+/* / */
 
 .service-col {
   color: #ffffff;
@@ -222,13 +213,15 @@ a:active { text-decoration: none; }
   font-family: 'Roboto';
 }
 
-#validationResponse {
-  height: 40%;
+/* contact-form */
+
+.contactFormBox {
+  height: 60%;
   width: 50%;
   position: relative;
   left: 25%;
   right: 25%;
-  margin-top: 5%;
+  overflow: hidden;
 }
 
 .contactForm {
@@ -246,9 +239,22 @@ a:active { text-decoration: none; }
   background-color: transparent;
 }
 
+#validationResponse {
+  height: 40%;
+  width: 50%;
+  position: relative;
+  left: 25%;
+  right: 25%;
+  margin-top: 5%;
+}
+
+/* / */
+
 #textBody {
   resize: none;
 }
+
+/* footer */
 
 footer {
   text-align: center;
@@ -268,8 +274,6 @@ footer {
   font-size: 12px;
 }
 
-.twitch-link, .twitch-link:hover { color: #4b367c; }
-
 .devLink, .devLink:hover {
   color: #ffffff;
   text-decoration: none;
@@ -277,7 +281,11 @@ footer {
 
 #mailIcon { color: orange; }
 
-/*media-queries / mobile*/
+/* / */
+
+/* .twitch-link, .twitch-link:hover { color: #4b367c; } */
+
+/*media-queries / responsiveness*/
 @media screen and (max-width: 1200px) { 
   .service-col { width: 100%;  }
 }
@@ -330,3 +338,5 @@ footer {
     font-size: 5vw;
   }
 }
+
+/* / */
