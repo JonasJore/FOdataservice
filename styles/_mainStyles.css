@@ -100,7 +100,7 @@ a:active { text-decoration: none; }
 
 #particles-js {
   z-index: 1;
-  background: url('../assets/img/backgrounds/GaustatoppenBG.jpg') no-repeat center;
+  background: url('../assets/img/backgrounds/GaustatoppenBG.JPG') no-repeat center;
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -176,7 +176,7 @@ a:active { text-decoration: none; }
   width: 100%;
   min-height: 40vh;
   background-color: #dcdcdc;
-  background: url('../assets/img/backgrounds/VestfjorddalenBG.jpg') no-repeat center;
+  background: url('../assets/img/backgrounds/VestfjorddalenBG.JPG') no-repeat center;
   background-attachment: fixed;
   -moz-background-size: cover;
   background-size: cover;

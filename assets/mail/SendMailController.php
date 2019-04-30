@@ -11,11 +11,18 @@ class SendMailController {
   public function printStuff(): String {
     return $this->mail->getTypeOfService();
   }
+
+  private function mailContent(): String {
+    $message = '<b>'.$this->mail->getTypeOfService().'</b>'.'<br/>';
+    $message .= $this->mail->getMessage();
+
+    return $message;
+  }
   
   private function setHeaders() {
     $headers = 'From: ' . $this->mail->getFromMail() . "\r\n";
     $headers .= 'Reply-To: ' . $this->mail->getFromMail() . "\r\n";
-    $headers .= 'CC: jonas.jore@gmail.com' . "\r\n";
+    $headers .= 'CC:' . $this->mail->getFromMail() . "\r\n";
     $headers .= 'Content-Type: text/html; charset=UTF-8' . "\r\n";
     
     return $headers;
@@ -26,7 +33,7 @@ class SendMailController {
     mail(
       $toAdress,
       $this->mail->getSubject(),
-      $this->mail->getMessage(),
+      $this->mailContent(),
       $this->setHeaders()
     );
   }

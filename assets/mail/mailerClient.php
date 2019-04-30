@@ -10,12 +10,13 @@ $typeOfService = $mailRequest['typeOfService'];
 $mailBody = $mailRequest['text'];
 
 // mailadressen, mail fra kontaktskjema skal sendes til
-const ADRESS = 'jonas.jore@gmail.com';
+const ADRESS = 'tekniker@fodataservice.com';
 
 $mail = new Mail($fromMail, $subject, $typeOfService, $mailBody);
 
 $mailController = new SendMailController($mail);
 
 $mailController->sendTo(ADRESS);
-echo 'koden kjørte uten problemer 👨‍💻💩';
+
+echo 'forespørsel til mail sendt uten problemer';
 ?>
