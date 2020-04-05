@@ -1,2 +1,2 @@
-# fodataservice.no
+# fodataservice.com
 Hjemmeside for F.Ø Dataservice
