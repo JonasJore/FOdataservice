@@ -48,6 +48,13 @@
       </div>
     </nav>
   </section>
+  <section class="covid19Warning">
+    <a href="#news">
+      <div class="covid19Container">
+        <p class="covid19paragraph">Viktig informasjon ang. COVID-19 >> </p>
+      </div>
+    </a>
+  </section>
   <section id="welcomeScreen">
     <div id="particles-js"></div>
     <div class="welcomeCanvas">
@@ -83,7 +90,7 @@
       </div>
     </div>
   </section>
-  <section id="services">
+  <section id="services" class="services">
     <div class="container-fluid">
       <div class="row text-center serviceBox serviceHeader">
         <h3>Tjenester vi tilbyr</h3>
@@ -136,9 +143,26 @@
       </div>
     </div>
   </section>
-  <section id="news">
+
+  <section id="news" class="news">
+    <div class="newsTextBox">
+      <div class="warning-icon">
+        <img src="./assets/img/warning_icon.png" alt="COVID-19 warning icon">
+      </div>
+      <h2 class="newsHeader">Viktig informasjon ang. COVID-19</h2>
+      <p class="lead">
+        I disse tider er det oppdaget en stor grad av svindel forsøk over E-post. Dette gjelder fra banker, kreditorer, forsikring, og andre ting. 
+        Om du har fått en e-post som du er usikker på er ekte, ta gjerne kontakt så skal vi
+        hjelpe deg å se gjennom disse. Har du ved et uhell trykket på en link du er usikker på kan være skadelig, så ta <a href="#contactFormSection">kontakt</a>
+        snarest.
+      </p>
+    </div>
+  </section>
+
+  <section id="bottomSection">
 
   </section>
+
   <section id="contactFormSection">
     <div class="contactFormBox">
       <form class="contactForm">
@@ -172,8 +196,6 @@
             <h5>Melding</h5>
           </label>
           <textarea class="form-control" id="textBody" rows="3">
-
-
           </textarea>
         </div>
         <div class="form-group">
