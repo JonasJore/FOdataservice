@@ -192,14 +192,19 @@ html {
 
 .news {
   display: flex;
+  background-color: #fff;
+  color: #36454f;
   height: 500px;
+  padding: 5%;
 }
 
 .newsTextBox {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5%;
+  align-items: center;
+  margin: 0 auto;
+  width: 970px;
 }
 
 #bottomSection {
@@ -216,8 +221,6 @@ html {
   min-height: 84vh;
   background-color: #e1e1e1;
 }
-
-/* / */
 
 .service-col {
   color: #ffffff;
@@ -360,5 +363,3 @@ footer {
     font-size: 5vw;
   }
 }
-
-/* / */
