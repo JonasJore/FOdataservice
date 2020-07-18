@@ -9,7 +9,7 @@
   <!-- favicon for browser tab: -->
   <link rel="shortcut icon" type="image/png" href="./assets/img/faviconEx.png" />
   <!-- custom css: -->
-  <link rel="stylesheet" type="text/css" href="styles/_mainStyles.css" />
+  <link rel="stylesheet" type="text/css" href="styles/main.css" />
   <!-- bootstrap: -->
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
@@ -20,42 +20,26 @@
 </head>
 
 <body>
-  <section id="navBar">
-    <nav class="navbar-main">
-      <div id="myTopNav">
-        <ul id="navMenu" class="navMenu">
-          <li class="navElement" id="homeLink">
-            <a class="navLink" href="#welcomeScreen">FØdataservice</a>
-          </li>
-          <li class="navElement" id="aboutLink">
-            <a class="navLink" href="#about">Om</a>
-          </li>
-          <li class="navElement" id="servicesLink">
-            <a class="navLink" href="#services">Tjenester</a>
-          </li>
-          <li class="navElement" id="newsLink">
-            <a class="navLink" href="#news">Nytt</a>
-          </li>
-          <li class="navElement" id="contactLink">
-            <a class="navLink" href="#contactFormSection">Kontakt</a>
-          </li>
-          <li class="navElement" id="burger">
-            <a href="javascript:void(0);" class="burgerIcon" onclick="expandMenu()">
-              <i class="fa fa-bars" id="burgerFavicon"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
+  <section class="nav">
+    <nav class="top-navbar" id="top-navbar">
+      <a href="" class="active">FØdataservice</a>
+      <a href="#about">About</a>
+      <a href="#services">Tjenester</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="javascript:void(0);" class="burgerIcon" onclick="myFunction()">
+        <i class="fa fa-bars" id="burgerFavicon"></i>
+      </a>
     </nav>
   </section>
-  <section class="covid19Warning">
-    <a href="#news">
-      <div class="covid19Container">
-        <p class="covid19paragraph">Viktig informasjon ang. COVID-19 >> </p>
-      </div>
-    </a>
-  </section>
   <section id="welcomeScreen">
+    <div class="covid19Warning">
+      <a href="#news">
+        <div class="covid19Container">
+          <p class="covid19paragraph">Viktig informasjon ang. COVID-19 >> </p>
+        </div>
+      </a>
+    </div>
     <div id="particles-js"></div>
     <div class="welcomeCanvas">
       <div class="container">
@@ -153,7 +137,7 @@
       <p class="lead">
         I disse tider er det oppdaget en stor grad av svindel forsøk over E-post. Dette gjelder fra banker, kreditorer, forsikring, og andre ting. 
         Om du har fått en e-post som du er usikker på er ekte, ta gjerne kontakt så skal vi
-        hjelpe deg å se gjennom disse. Har du ved et uhell trykket på en link du er usikker på kan være skadelig, så ta <a href="#contactFormSection">kontakt</a>
+        hjelpe deg å se gjennom disse. Har du ved et uhell trykket på en link du er usikker på kan være skadelig, så ta <a href="#contact">kontakt</a>
         snarest.
       </p>
     </div>
@@ -163,7 +147,7 @@
 
   </section>
 
-  <section id="contactFormSection">
+  <section id="contact">
     <div class="contactFormBox">
       <form class="contactForm">
         <h3>Ta kontakt</h3>
