@@ -1,6 +1,8 @@
-let expandMenu = () => {
-  const navId = document.getElementById("myTopNav");
-  return navId.className === "navMenu"
-    ? (navId.className += " responsiveMenu")
-    : (navId.className = "navMenu");
-};
+const myFunction = () => {
+  const navbarElement = document.getElementById("top-navbar");
+  if (navbarElement.className === "top-navbar") {
+    navbarElement.className += " responsive";
+  } else {
+    navbarElement.className = "top-navbar";
+  }
+}
