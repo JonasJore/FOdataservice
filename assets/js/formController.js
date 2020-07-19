@@ -6,7 +6,7 @@ const validering = {
 }
 Object.freeze(validering)
 
-let validation = (email, subject, type, text) => {
+const validation = (email, subject, type, text) => {
   let validationRules = []
   let validationErrorMessages = []
   const emailRegEx = /^[a-å|0-9._%+-]+@[a-z|0-9.-]+\.[a-z]{2,}$/
