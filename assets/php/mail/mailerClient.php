@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 require_once 'Mail.php';
 require_once 'SendMailController.php';
 
@@ -13,10 +14,9 @@ $mailBody = $mailRequest['text'];
 const ADRESS = 'tekniker@fodataservice.com';
 
 $mail = new Mail($fromMail, $subject, $typeOfService, $mailBody);
-
 $mailController = new SendMailController($mail);
-
 $mailController->sendTo(ADRESS);
 
 echo 'forespørsel til mail sendt uten problemer';
+
 ?>

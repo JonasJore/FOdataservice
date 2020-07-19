@@ -15,16 +15,14 @@ class SendMailController {
   private function mailContent(): String {
     $message = '<b>'.$this->mail->getTypeOfService().'</b>'.'<br/>';
     $message .= $this->mail->getMessage();
-
     return $message;
   }
-  
+
   private function setHeaders() {
     $headers = 'From: ' . $this->mail->getFromMail() . "\r\n";
     $headers .= 'Reply-To: ' . $this->mail->getFromMail() . "\r\n";
     $headers .= 'CC:' . $this->mail->getFromMail() . "\r\n";
     $headers .= 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-    
     return $headers;
   }
 

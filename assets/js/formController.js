@@ -106,7 +106,7 @@ let prepareJsonObj = (mail, subject, typeOfService, text) => {
 }
 
 let sendMailRequest = obj => {
-  const endpoint = 'assets/mail/mailerClient.php'
+  const endpoint = 'assets/php/mail/mailerClient.php'
   const requestRoute = `./${endpoint}`
 
   fetch(requestRoute, {
