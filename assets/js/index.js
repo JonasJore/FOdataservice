@@ -7,7 +7,6 @@ const callJsFile = (jsFile) => {
   document.getElementsByTagName('head')[0].appendChild(script)
 }
 
-callJsFile("bootstrap/js/bootstrap.min.js")
 callJsFile('assets/js/responsiveNavbar.js')
 callJsFile('assets/js/formController.js')
 callJsFile('assets/js/particles.js')
