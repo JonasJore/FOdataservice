@@ -1,5 +1,4 @@
 <?php 
-
 class SendMailController {
   private $mail;
 

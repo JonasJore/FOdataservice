@@ -1,5 +1,4 @@
 <?php
-
 require_once 'Mail.php';
 require_once 'SendMailController.php';
 
@@ -18,5 +17,4 @@ $mailController = new SendMailController($mail);
 $mailController->sendTo(ADRESS);
 
 echo 'forespørsel til mail sendt uten problemer';
-
 ?>
