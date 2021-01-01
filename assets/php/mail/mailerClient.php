@@ -8,13 +8,10 @@ $fromMail = $mailRequest['mail'];
 $subject = $mailRequest['subject'];
 $typeOfService = $mailRequest['typeOfService'];
 $mailBody = $mailRequest['text'];
-
 // mailadressen, mail fra kontaktskjema skal sendes til
-const ADRESS = 'tekniker@fodataservice.com';
+const TO_ADDRESS = 'tekniker@fodataservice.com';
 
-$mail = new Mail($fromMail, $subject, $typeOfService, $mailBody);
+$mail = new Mail(TO_ADDRESS, $subject, $typeOfService, $mailBody);
 $mailController = new SendMailController($mail);
-$mailController->sendTo(ADRESS);
-
-echo 'forespørsel til mail sendt uten problemer';
+$mailController->sendTo(TO_ADDRESS, $fromMail);
 ?>
