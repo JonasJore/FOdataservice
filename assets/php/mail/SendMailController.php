@@ -21,7 +21,7 @@ class SendMailController {
     $headers = 'From: ' . $this->mail->getFromMail() . "\r\n";
     $headers .= 'Reply-To: ' . $this->mail->getFromMail() . "\r\n";
     $headers .= 'CC:' . $this->mail->getFromMail() . "\r\n";
-    $headers .= 'Content-Type: text/html; charset=UTF-8' . "\r\n";
+    $headers .= 'Content-Type:text/html;charset=UTF-8' . "\r\n";
     return $headers;
   }
 
@@ -31,7 +31,8 @@ class SendMailController {
       $toAdress,
       $this->mail->getSubject(),
       $this->mailContent(),
-      $this->setHeaders()
+      $this->setHeaders(),
+      "-ftekniker@fodataservice.com"
     );
   }
 }
